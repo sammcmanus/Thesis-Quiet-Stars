@@ -6,7 +6,7 @@ The project, Quiet Stars, analyzes NBA player and team performance using histori
 
 This project uses public data set from <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats">Kaggle: NBA Stats (1947-present)</a>.
 
-Dataset details:
+Datasets details:
 
 Player Per Game – Player averages by season (points, rebounds, assists, etc.).
 
@@ -33,6 +33,7 @@ Compare advanced stats with traditional box score stats to see which are most us
 Build models that highlight trends in player performance over time.
 
 Provide insights that make basketball stats easier to understand and use.
+
 
 
 
