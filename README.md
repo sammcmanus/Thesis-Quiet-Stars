@@ -4,8 +4,7 @@ The project, Quiet Stars, analyzes NBA player and team performance using histori
 
 ## 📊 Data Sources
 
-This project uses public basketball datasets from Basketball Reference
-. The files were downloaded from a Kaggle collection of historical NBA/ABA/BAA stats. Each dataset focuses on different parts of the game:
+This project uses public data set from Kaggle <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats">Kaggle: NBA Stats (1947-present)</a>. Each dataset focuses on different parts of the game:
 
 Player Per Game – Player averages by season (points, rebounds, assists, etc.).
 
@@ -23,12 +22,13 @@ Team Summaries – Basic results like wins, losses, playoff finishes, and champi
 
 The goals of Quiet Stars are to:
 
-✅ Clean and prepare the historical datasets for analysis.
+Clean and prepare the historical datasets for analysis.
 
-🔎 Explore how player and team stats connect to winning and long-term success.
+Explore how player and team stats connect to winning and long-term success.
 
-📊 Compare advanced stats with traditional box score stats to see which are most useful.
+Compare advanced stats with traditional box score stats to see which are most useful.
 
-🤖 Build models that highlight trends in player performance over time.
+Build models that highlight trends in player performance over time.
 
-🏆 Provide insights that make basketball stats easier to understand and use.
+Provide insights that make basketball stats easier to understand and use.
+
