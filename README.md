@@ -8,17 +8,13 @@ This project uses public data set from <a href="https://www.kaggle.com/datasets/
 
 Datasets details:
 
-Player Per Game – Player averages by season (points, rebounds, assists, etc.).
+Advanced.csv: Contains advanced player metrics for each season by team, including efficiency ratings like Player Efficiency Rating, True Shooting Percentage, usage rates, win shares (WS), and other analytics such as offensive/defensive box plus-minus (OBPM/DBPM).
 
-Advanced Stats – Efficiency metrics like PER, true shooting %, usage rate, and win shares.
+Player Career Info.csv: Containts biographical details such as birthdate, height, weight, college, position and draft information. 
 
-Player Season Info – Biographical and career details for players by season.
+Player Per Game.csv: Provides per-game averages for individual players by season and team, covering basic stats like minutes played, field goals, three-pointers, rebounds, assists, steals, blocks, turnovers, and points.
 
-Team Stats Per Game – Team averages per season, such as scoring, rebounding, and defense.
-
-Team Totals – Cumulative totals for teams across each season.
-
-Team Summaries – Basic results like wins, losses, playoff finishes, and championships.
+Team Summaries.csv: This file aggregates team-level data by season, including win-loss records, playoff status, team ratings, pace, shooting efficiencies, rebounding rates, and attendance figures. 
 
 ## 🎯 Project Goals
 
@@ -33,6 +29,7 @@ Compare advanced stats with traditional box score stats to see which are most us
 Build models that highlight trends in player performance over time.
 
 Provide insights that make basketball stats easier to understand and use.
+
 
 
 
