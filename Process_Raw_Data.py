@@ -84,7 +84,7 @@ def load_clean_export():
         [
             (player_stats_DF["gs"] / player_stats_DF["g"] >= 0.5) & (player_stats_DF["mp_per_game"] >= 24.5),
             (player_stats_DF["g"] >= 30) & (player_stats_DF["gs"] / player_stats_DF["g"] < 0.5) & (player_stats_DF["mp_per_game"] >= 15),
-            (player_stats_DF["g"] >= 15) & (player_stats_DF["mp_per_game"] < 24.5),
+            (player_stats_DF["g"] >= 15) & (player_stats_DF["g"] < 30) & (player_stats_DF["mp_per_game"] > 10),
         ],
         ["S", "R", "B"],
         default="I"
