@@ -6,41 +6,11 @@ import pandas as pd
 
 set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
-def insight_2_data_prep():
+def insight_2_data_load():
     global top_half, bottom_half
 
-    player_stats_DF = pd.read_csv("Data\Processed\player_stats_cleaned.csv")
-
-    # Getting role players
-    role_players = player_stats_DF[player_stats_DF["role"] == "R"]
-
-    # Aggregate role player stats by team and season
-    role_player_stats = role_players.groupby(['season', 'abv'])[['playoffs', 'per', 'obpm', 'dbpm', 'team_win_perc']].mean().reset_index()
-
-    role_player_stats.columns = ['season', 'team', 'playoffs', 'per', 'obpm', 'dbpm', 'team_win_perc']
-
-    role_player_stats["per"] = role_player_stats["per"].round(2)
-    role_player_stats["obpm"] = role_player_stats["obpm"].round(2)
-    role_player_stats["dbpm"] = role_player_stats["dbpm"].round(2)
-
-    # Filter for 2023-24 season
-    #role_player_stats_playoffs = role_player_stats[role_player_stats['season'] == 2023]
-    #role_player_stats_no_playoffs = role_player_stats[role_player_stats['season'] == 2023]
-    #playoff_teams = role_player_stats[(role_player_stats['team_win_perc'] >= .6) & (role_player_stats['season'] == 2025)]
-    #non_playoff_teams = role_player_stats[(role_player_stats['team_win_perc'] < .6) & (role_player_stats['season'] == 2025)]
-
-    # Sort by season + win percentage
-    sorted_df = role_player_stats.sort_values(["season", "team_win_perc"], ascending=[True, False])
-
-    # Rank teams within each season
-    sorted_df["rank"] = sorted_df.groupby("season")["team_win_perc"].rank(method="first", ascending=False)
-
-    # Count teams per season
-    team_counts = sorted_df.groupby("season")["team_win_perc"].transform("count")
-
-    # Split into top half and bottom half
-    top_half = sorted_df[sorted_df["rank"] <= team_counts / 2].copy()
-    bottom_half = sorted_df[sorted_df["rank"] > team_counts / 2].copy()
+    top_half = pd.read_csv("Data\Processed\top_half.csv")
+    bottom_half = pd.read_csv("Data\Processed\bottom_half.csv")
 
 
 def insight_2_Top_Half():

@@ -11,6 +11,7 @@ from copy import deepcopy
 
 # Load Datasets
 def load_clean_export():
+    global player_stats_DF
     advanced = pd.read_csv("Data\Raw\Advanced.csv")
     per_game = pd.read_csv("Data\Raw\Player Per Game.csv")
     team_summaries = pd.read_csv("Data\Raw\Team Summaries.csv")
@@ -111,11 +112,46 @@ def load_clean_export():
 
 
     # Save the cleaned and processed DataFrame to a new CSV file
-    player_stats_DF.to_csv("Data\Processed\player_stats_cleaned.csv", index=False)
+    player_stats_DF.to_csv("Data/Processed/player_stats_cleaned.csv", index=False)
+
+def insight_2_data_prep():
+    global top_half, bottom_half
+
+    player_stats_DF = pd.read_csv("Data\Processed\player_stats_cleaned.csv")
+
+    # Getting role players
+    role_players = player_stats_DF[player_stats_DF["role"] == "R"]
+
+    # Aggregate role player stats by team and season
+    role_player_stats = role_players.groupby(['season', 'abv'])[['playoffs', 'per', 'obpm', 'dbpm', 'team_win_perc']].mean().reset_index()
+
+    role_player_stats.columns = ['season', 'team', 'playoffs', 'per', 'obpm', 'dbpm', 'team_win_perc']
+
+    role_player_stats["per"] = role_player_stats["per"].round(2)
+    role_player_stats["obpm"] = role_player_stats["obpm"].round(2)
+    role_player_stats["dbpm"] = role_player_stats["dbpm"].round(2)
+
+    # Sort by season + win percentage
+    sorted_df = role_player_stats.sort_values(["season", "team_win_perc"], ascending=[True, False])
+
+    # Rank teams within each season
+    sorted_df["rank"] = sorted_df.groupby("season")["team_win_perc"].rank(method="first", ascending=False)
+
+    # Count teams per season
+    team_counts = sorted_df.groupby("season")["team_win_perc"].transform("count")
+
+    # Split into top half and bottom half
+    top_half = sorted_df[sorted_df["rank"] <= team_counts / 2].copy()
+    bottom_half = sorted_df[sorted_df["rank"] > team_counts / 2].copy()
+
+    # Save the cleaned and processed DataFrame to a new CSV file
+    top_half.to_csv("Data/Processed/top_half.csv", index=False)
+    bottom_half.to_csv("Data/Processed/bottom_half.csv", index=False)
 
     
 if __name__ == "__main__":
     os.chdir(set_working_dir)
     load_clean_export()
+    insight_2_data_prep()
     
     
