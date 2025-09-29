@@ -224,4 +224,5 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 ## Change Log
 
     1.0 — Initial Transition from Kaggle
-    1.1 - Initial Documentation
+    1.1 — Initial Documentation
+
