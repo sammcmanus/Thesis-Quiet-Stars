@@ -8,7 +8,7 @@ set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
 def insight_1_Load_Data():
     global player_stats_DF
-    player_stats_DF = pd.read_csv("Data\Processed\player_stats_cleaned.csv")
+    player_stats_DF = pd.read_csv("Data/Processed/player_stats_cleaned.csv")
 
 def insight_1_Starters():
     # Starters

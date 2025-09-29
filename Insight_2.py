@@ -7,10 +7,10 @@ import pandas as pd
 set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
 def insight_2_data_load():
-    global top_half, bottom_half
+    global top_half_df, bottom_half_df
 
-    top_half = pd.read_csv("Data\Processed\top_half.csv")
-    bottom_half = pd.read_csv("Data\Processed\bottom_half.csv")
+    top_half_df = pd.read_csv("Data/Processed/top_half.csv")
+    bottom_half_df = pd.read_csv("Data/Processed/bottom_half.csv")
 
 
 def insight_2_Top_Half():
@@ -19,10 +19,10 @@ def insight_2_Top_Half():
     labels = [" > 10","10 to 15", "15+"]
 
     # Safe assignment with .loc
-    top_half.loc[:, "per_bucket"] = pd.cut(top_half["per"], bins=bins, labels=labels)
+    top_half_df.loc[:, "per_bucket"] = pd.cut(top_half_df["per"], bins=bins, labels=labels)
 
     # Count teams per bucket
-    bucketed = top_half.groupby("per_bucket", observed=True).size().reset_index(name="team_count")
+    bucketed = top_half_df.groupby("per_bucket", observed=True).size().reset_index(name="team_count")
 
     # Plot with labels
     fig, ax = plt.subplots()
@@ -42,10 +42,10 @@ def insight_2_Bottom_Half():
     labels = [" > 10","10 to 15", "15+"]
 
     # Safe assignment with .loc
-    bottom_half.loc[:, "per_bucket"] = pd.cut(bottom_half["per"], bins=bins, labels=labels)
+    bottom_half_df.loc[:, "per_bucket"] = pd.cut(bottom_half_df["per"], bins=bins, labels=labels)
 
     # Count teams per bucket
-    bucketed = bottom_half.groupby("per_bucket", observed=True).size().reset_index(name="team_count")
+    bucketed = bottom_half_df.groupby("per_bucket", observed=True).size().reset_index(name="team_count")
 
     # Plot with labels
     fig, ax = plt.subplots()
@@ -61,7 +61,7 @@ def insight_2_Bottom_Half():
 
 if __name__ == "__main__":
     os.chdir(set_working_dir)
-    insight_2_data_prep()
+    insight_2_data_load()
     insight_2_Top_Half()
     insight_2_Bottom_Half()
     

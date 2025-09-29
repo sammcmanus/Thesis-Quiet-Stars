@@ -117,7 +117,7 @@ def load_clean_export():
 def insight_2_data_prep():
     global top_half, bottom_half
 
-    player_stats_DF = pd.read_csv("Data\Processed\player_stats_cleaned.csv")
+    player_stats_DF = pd.read_csv("Data/Processed/player_stats_cleaned.csv")
 
     # Getting role players
     role_players = player_stats_DF[player_stats_DF["role"] == "R"]
