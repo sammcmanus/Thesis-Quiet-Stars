@@ -24,6 +24,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
     * [#1: Defensive Metrics and How They Support Team Success](#1-defensive-metrics-and-how-they-support-team-success)
     * [#2: Role Player Efficiency and How It Supports Team Success](#2-role-player-efficiency-and-how-it-supports-team-success)
     * [#3: Player Efficiency and Its Correlation to Experience](#3-player-efficiency-and-its-correlation-to-experience)
+* [Change Log](#change-log)
 
 ## Data Sources
 
@@ -220,7 +221,7 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 
 <BR>
 
-## <center>Change Log</center>
+## Change Log
 
     1.0 — Initial Transition from Kaggle
     1.1 - Initial Documentation
