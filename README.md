@@ -175,23 +175,12 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 
 ## Columns Used By Table
 
-    **Advanced.csv →**
-
-    ```
-    ["season", "player_id", "abv", "per", "ts_percent", "obpm", "dbpm", "usg_percent", "gs", "g"]
-    ```
-
-    **Player Per Game.csv →**
-
-    ```
-    ["season", "player_id", "abv", "ast_per_game", "tov_per_game", "mp_per_game"]
-    ```
-
-    **Team Summaries.csv →**
-
-    ```
-    ["season", "abv", "w", "l", "playoffs"]
-    ```
+| File                       | Columns Used                                                                            |
+| ------------------------   | --------------------------------------------------------------------------------------- |
+| `Advanced.csv`             | season, player_id, abv, per, ts_percent, obpm, dbpm, usg_percent, gs, g                 |
+| `Player Per Game.csv`      | season, player_id, abv, ast_per_game, tov_per_game, mp_per_game                         |
+| `Team Summaries.csv`       | season, abv, w, l, playoffs                                                             |
+| `Player Career Info.csv`   | player_id, from                                                                         |    
 
 ## Notes & Implications
     
