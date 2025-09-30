@@ -16,7 +16,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
     * [Rounding](#rounding)
     * [Derived fields](#derived-fields)
     * [Row exclusion after labeling](#row-exclusion-after-labeling)
-    * [Output](#output)
+    * [Output Files](#output-files)
     * [Insight 2 Data Prep](#insight-2-data-prep)
     * [Columns Used By Table](#columns-used-by-table)
     * [Notes & Implications](#notes--implications)
@@ -25,6 +25,9 @@ Teams with deeper, more efficient benches finish with higher win percentages and
     * [#2: Role Player Efficiency and How It Supports Team Success](#2-role-player-efficiency-and-how-it-supports-team-success)
     * [#3: Player Efficiency and Its Correlation to Experience](#3-player-efficiency-and-its-correlation-to-experience)
 * [Change Log](#change-log)
+* [Project Timeline](docs/project_timeline.xlsx)
+
+<BR>
 
 ## Data Sources
 
@@ -137,12 +140,6 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 
 <BR>
 
-## Output
-
-    Write Data/Processed/player_stats_cleaned.csv (no index).
-
-<BR>
-
 ## Insight 2 Data Prep
 
     Input: Data/Processed/player_stats_cleaned.csv
@@ -157,10 +154,8 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 
     Split into top_half and bottom_half by median rank count per season.
 
-    Save:
-
+    Output:
     Data/Processed/top_half.csv
-
     Data/Processed/bottom_half.csv
 
 <BR>
@@ -174,7 +169,17 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 | `Team Summaries.csv`       | season, abv, w, l, playoffs                                                             |
 | `Player Career Info.csv`   | player_id, from                                                                         |    
 
-<BR>
+<BR><BR>
+
+## Output Files
+
+| File                          | Purpose                                                                               |
+| ----------------------------- | ------------------------------------------------------------------------------------- |
+| `player_stats_cleaned.csv`    | Provide a clean flattened data soure to use for data insights.                        |
+| `top_half.csv`                | Results of insight 2 data prep output, this is the data for role players by top 50% of each <BR> season teams by win percentage.                                                                                                             |
+| `bottom_half.csv`             | Results of insight 2 data prep output, this is the data for role players by bottom 50% of each <BR> season teams by win percentage.             
+
+<BR><BR>
 
 ## Notes & Implications
     
