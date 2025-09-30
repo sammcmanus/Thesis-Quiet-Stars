@@ -38,7 +38,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
 | `Player Career Info.csv` | Player bio/metadata: birthdate, height, weight, college, draft, position.               |
 | `Team Summaries.csv`     | Team-season rollups: wins/losses, pace, ratings, shooting/rebounding rates, attendance. |
 
-Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats">Kaggle – NBA/ABA/BAA Stats (1947-present)</a>
+Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats">Kaggle – NBA/ABA/BAA Stats (1947-present)</a>
 
 <BR>
 
