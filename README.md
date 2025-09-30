@@ -25,7 +25,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
     * [#2: Role Player Efficiency and How It Supports Team Success](#2-role-player-efficiency-and-how-it-supports-team-success)
     * [#3: Player Efficiency and Its Correlation to Experience](#3-player-efficiency-and-its-correlation-to-experience)
 * [Change Log](#change-log)
-* [Project Timeline](Docs/project_timeline.xlsx)
+* [Project Timeline](Docs/Project_Timeline.md)
 
 <BR>
 
