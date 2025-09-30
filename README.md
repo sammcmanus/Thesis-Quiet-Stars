@@ -37,23 +37,19 @@ Teams with deeper, more efficient benches finish with higher win percentages and
 
 Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats">Kaggle – NBA/ABA/BAA Stats (1947-present)</a>
 
-<BR><BR>
-# <Center>Data Cleaning</Center>
+<BR>
+
+# Data Cleaning
+
 <BR>
 
 ## Row filtering 
 
     Keep NBA only: lg == 'NBA'.
 
-    Keep seasons ≥ 2000, exclude 2020 and 2021 (due to covid years)
+    Keep seasons between 2000 and 2025, excluding 2020 and 2021 (due to covid years)
 
-    Drop multi-team aggregate rows coded as '2TM':
-
-    Advanced.team != '2TM'
-
-    Player Per Game.team != '2TM'
-
-    Team Summaries.abbreviation != '2TM'
+    Drop teams named "2TM" (These represent such as All-Star teams)
 
     Drop league summary rows: Team Summaries.team != 'League Average'.
 
@@ -63,29 +59,29 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 
     Rename team columns to a common key abv:
 
-    Advanced.team → abv
+        Advanced.team → abv
 
-    Player Per Game.team → abv
+        Player Per Game.team → abv
 
-    Team Summaries.abbreviation → abv
+        Team Summaries.abbreviation → abv
 
-    Force integer types:
+    Force types:
 
-    Player Per Game.gs → int
+        Player Per Game.gs → int
 
-    Team Summaries.w → int
+        Team Summaries.w → int
 
-    Team Summaries.l → int
+        Team Summaries.l → int
+
+        Advanced.season → int
+
+        Player Career Info.from → int
 
 <BR>
 
 ## Missing values
 
-    Player Per Game: all columns are fillna(0) (one blanket call on the filtered frame).
-
-    This sets any missing percentages, rates, and counts in the per-game table to 0.
-
-    Other input tables are not filled (left as-is).
+    Player Per Game: all columns are fillna(0) (Setting any missing percentages, rates, and counts in the per-game table to 0)
 
 <BR>
 
@@ -110,23 +106,20 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 
 ## Derived fields
 
-    Assist-to-turnover ratio a2t_perc
-
-    If ast_per_game == 0 or tov_per_game == 0 → set to 0
-
-    Else a2t_perc = ast_per_game / tov_per_game, rounded to 2 decimals.
+    a2t_perc (Assist-to-turnover ratio): ast_per_game / tov_per_game (if either is set to 0 then a2t_perc is 0), rounded to 2 decimals.   
 
     Team win % team_win_perc = w / (w + l), rounded to 2 decimals.
 
-    Role classification role (string in {'S', 'R', 'B', 'I'}):
+<BR>
 
-    Starter 'S': gs/g ≥ 0.5 and mp_per_game ≥ 24.5
+| Role              | classification                                                            |
+| ----------------- | --------------------------------------------------------------------------|
+| Starter (S)       | Games started ≥ to 50% and minutes played per game ≥ 24.5 minutes         |
+| Role Player (R)   | Games played is ≥ 30 and games started < 50% and minutes per game ≥ 15    |
+| Bench Player (B)  | Games played between 15 & 30 and minutes per game >= 10                   |
+| Insignificant (I) | All others are considered insignificant and are filtered out.             |
 
-    Role 'R': g ≥ 30 and gs/g < 0.5 and mp_per_game ≥ 15
-
-    Bench 'B': g ≥ 15 and mp_per_game < 24.5
-
-    Else: 'I' (insignificant)
+<BR>
 
     Experience (seasons in league):
 
@@ -156,9 +149,7 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 
     Keep Role players only: role == 'R'.
 
-    Group by (season, abv) and compute means of:
-
-    playoffs, per, obpm, dbpm, team_win_perc
+    Group by (season, abv) and compute means of: playoffs, per, obpm, dbpm, team_win_perc
 
     Rename abv → team; round per, obpm, dbpm to 2 decimals.
 
@@ -183,20 +174,23 @@ Data Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-sta
 | `Team Summaries.csv`       | season, abv, w, l, playoffs                                                             |
 | `Player Career Info.csv`   | player_id, from                                                                         |    
 
+<BR>
+
 ## Notes & Implications
     
     Excluding the shortened seasons 2020 & 2021 that was caused by covid.
     
-    Multi-team seasons: rows with '2TM' are dropped, so you keep per-team splits and do not use season-total rows. When later aggregating to team-season, a traded player’s impact is naturally isolated to each team stint (no double-counting within a team, but a player can appear for two teams in the same season).
+    Multi-team seasons: For players traded mid-season, their stats are aggregated on a per-team basis. This means a player will have a separate record for each team they played on within the same season.
 
-    Blanket fillna(0) on Player Per Game: this sets any missing per-game fields (including percent/rate fields) to zero. That makes downstream code simpler but can understate rates when the true value is “not applicable” rather than 0. (This is intentional per code; call it out here to avoid confusion.)
+    Blanket fillna(0) on Player Per Game: this sets any missing per-game fields (including percent/rate fields) to zero. This is intentional per code; call it out here to avoid confusion.
 
-    A/T ratio when TO=0: the code sets a2t_perc to 0 when tov_per_game == 0 or ast_per_game == 0. This avoids divide-by-zero but treats those cases as zero rather than NaN/∞. Results using A/T should be interpreted with that rule in mind.
+    A/T ratio when TO=0: the code sets a2t_perc to 0 when tov_per_game == 0 or ast_per_game == 0, this avoids divide-by-zero.
 
-    Experience: computed as season - from from Player Career Info.csv after an inner merge (players missing from are implicitly dropped at this step).
 
 <BR><BR>
-# <center>Insight Summaries</center>
+
+# Insight Summaries
+
 <BR>
 
 ## #1: Defensive Metrics and How They Support Team Success
