@@ -12,7 +12,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
 * [Data Cleaning](#data-cleaning)
     * [Row Filtering](#row-filtering)
     * [Column Standardization](#column-standardization)
-    * [Missing values](#missing-values)
+    * [Impute values](#impute-values)
     * [Merge](#merge)
     * [Rounding](#rounding)
     * [Derived fields](#derived-fields)
@@ -86,7 +86,7 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
 
 <BR>
 
-## Missing values
+## Impute values
 
     Player Per Game: all columns are fillna(0) (Setting any missing percentages, rates, and counts in the per-game table to 0)
 
