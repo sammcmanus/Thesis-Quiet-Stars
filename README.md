@@ -8,6 +8,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
 # Contents
 
 * [Data Sources](#public-dataset)
+
 * [Data Cleaning](#data-cleaning)
     * [Row Filtering](#row-filtering)
     * [Column Standardization](#column-standardization)
@@ -20,11 +21,14 @@ Teams with deeper, more efficient benches finish with higher win percentages and
     * [Insight 2 Data Prep](#insight-2-data-prep)
     * [Columns Used By Table](#columns-used-by-table)
     * [Notes & Implications](#notes--implications)
+
 * [Insight Summaries](#insight-summaries)
-    * [#1: Defensive Metrics and How They Support Team Success](#1-defensive-metrics-and-how-they-support-team-success)
-    * [#2: Role Player Efficiency and How It Supports Team Success](#2-role-player-efficiency-and-how-it-supports-team-success)
-    * [#3: Player Efficiency and Its Correlation to Experience](#3-player-efficiency-and-its-correlation-to-experience)
-* [Change Log](#change-log)
+    * [#1: Defensive Metrics and How They Support Team Success](Docs/Insight_1.md)
+    * [#2: Role Player Efficiency and How It Supports Team Success](Docs/Insight_2.md)
+    * [#3: Player Efficiency and Its Correlation to Experience]()
+
+* [Change Log](Docs/Change_Log.mdg)
+
 * [Project Timeline](Docs/Project_Timeline.md)
 
 <BR>
@@ -192,36 +196,5 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
     A/T ratio when TO=0: the code sets a2t_perc to 0 when tov_per_game == 0 or ast_per_game == 0, this avoids divide-by-zero.
 
 
-<BR><BR>
 
-# Insight Summaries
 
-<BR>
-
-## #1: Defensive Metrics and How They Support Team Success
-
-    Goal: Show if teams with better defensive performance, particularly from bench role players, better end-of-season standings, emphasizing the defensive contributions of “quiet stars.”
-
-    DBPM (Defensive Box Plus-Minus) is a statistic that measures a player's defensive impact per 100 possessions in basketball. A higher DBPM means a player contributes more to their team's defense, like preventing opponents from scoring.Insight 
-
-<BR>
-
-## #2: Role Player Efficiency and How It Supports Team Success
-
-    Goal: Show that teams with more efficient role players have higher win percentages, emphasizing the efficiency of “quiet stars” in offensive and defensive contributions.
-
-    Player Effiency Rating (PER) is a per-minute rating that quantifies a player's performance by combining various box score statistics, such as points, rebounds, assists, steals, blocks, turnovers, and shooting efficiency, into a single value. It is normalized so that the league average PER is 15.0, with higher values indicating better performance.
-
-<BR>
-
-## #3: Player Efficiency and Its Correlation to Experience
-
-    Goal: Quantify how veteran NBA players with 7+ years of experience demonstrate higher efficiency compared to less experienced players, highlighting their value to team success through optimized roles and production.
-
-<BR>
-
-## Change Log
-
-    1.0 — Initial Transition from Kaggle
-    1.1 — Initial Documentation
-    
