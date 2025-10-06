@@ -1,12 +1,11 @@
 # Project Timeline
-# Project Timeline
 
 | TASK NAME                                         | SUB TASK NAME | STATUS        | START DATE    | END DATE  | DURATION  | COMMENTS / FEEDBACK   |
 |---------------------------------------------------|---------------|---------------|---------------|-----------|-----------|-----------------------|
 | Senior Thesis Research Proposal                   | Assignment 1  | Completed     | 08/18         | 09/04     | 17        |                       |
 | Literature Review Section for your Thesis Project | Assignment 2  | Completed     | 09/04         | 09/18     | 14        |                       |
 | Status Report #1                                  | Set up Kaggle coding environment.<br>Load required libraries and data files.<br><br>Filter data (NBA only, seasons ≥ 2000).<br><br>Deliverable: Data fully loaded and ready for cleaning. | Completed     | 09/18           | 09/25   | 7         | Insights Documentation: Summarize your "Insights" to clearly define whether they are findings, visualizations, or hypotheses for better progress tracking.<br><br>Data Cleaning: Document your method for handling missing values (e.g., dropping rows, imputation) to ensure transparency.<br><br>Transition to GitHub: Create a complete GitHub repository with a README, code, cleaned data, and documentation to ensure your work is reproducible and easy to follow.<br><br>Next Week's Plan: Define and break down specific upcoming tasks like feature engineering or visualization to stay focused and measure progress. |
-| Status Report #2 | Clean data (handle missing values).<br><br>Subset data (by year, team, bench players, role players, and veterans).<br><br>Create features (minutes per game, assist-to-turnover ratio, player experience).<br><br>Deliverable: Clean, organized dataset ready for analysis.<br><br>Transition to GitHub | Started | 09/25 | 10/02 | 7 |  |
+| Status Report #2 | Clean data (handle missing values).<br><br>Subset data (by year, team, bench players, role players, and veterans).<br><br>Create features (minutes per game, assist-to-turnover ratio, player experience).<br><br>Deliverable: Clean, organized dataset ready for analysis.<br><br>Transition to GitHub | Completed | 09/25 | 10/02 | 7 |  |
 | Final assignment |  | Not Started | 10/02 | 12/18 | 77 |  |
 | Status Report #3 | Analyze Insights 1–3.<br><br>Generate stats, graphs, and charts.<br><br>Deliverable: Completed analysis visuals for Insights 1–3. | Not Started | 10/02 | 10/09 | 7 |  |
 | Status Report #4 | Analyze Insights 4–6.<br><br>Generate stats, graphs, and charts.<br><br>Deliverable: Completed analysis visuals for Insights 4–6. | Not Started | 10/09 | 10/16 | 7 |  |
