@@ -1,6 +1,6 @@
 import os
 from Process_Raw_Data import load_clean_export, insight_2_data_prep
-from Insight_1 import insight_1_Load_Data, insight_1_Starters, insight_1_Role, insight_1_Bench
+from Insight_1 import insight_1_Load_Data, insight_1_Starters, insight_1_Role, insight_1_Bench, insight_1_Correlation, insight_1_DBPM_Buckets
 from Insight_2 import insight_2_data_load, insight_2_Top_Half, insight_2_Bottom_Half
 
 # Set your working directory here
@@ -18,7 +18,10 @@ if __name__ == "__main__":
     insight_1_Starters()
     insight_1_Role()
     insight_1_Bench()
+    insight_1_Correlation()
+    bucket_df = insight_1_DBPM_Buckets()
 
+    print(bucket_df )
     insight_2_data_load()
     insight_2_Top_Half()
     insight_2_Bottom_Half()
