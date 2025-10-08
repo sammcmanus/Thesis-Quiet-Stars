@@ -3,13 +3,15 @@ import os
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
 # Set your working directory here
 set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
 def insight_1_Load_Data():
     global player_stats_DF
+    
     player_stats_DF = pd.read_csv("Data/Processed/player_stats_cleaned.csv")
+    top_half_df = pd.read_csv("Data/Processed/top_half.csv")
+    bottom_half_df = pd.read_csv("Data/Processed/bottom_half.csv")
 
 def insight_1_Starters():
     # Starters
@@ -55,16 +57,17 @@ def insight_1_Bench():
     plt.close()
 
 def insight_1_Correlation():
-    # Calculate correlation between DBPM and Wins by player role
 
+    # Calculate correlation between DBPM and Wins by player role
     roles = {
         "S": "Starters",
         "R": "Role Players",
         "B": "Bench Players"
     }
-
+    
     corr_results = []
-
+    
+    # Loop through each role and calculate correlation
     for code, name in roles.items():
         subset = player_stats_DF.loc[player_stats_DF["role"] == code]
         corr = subset["dbpm"].corr(subset["w"])
@@ -102,6 +105,7 @@ def insight_1_DBPM_Buckets():
 
     print("\nAverage Wins by DBPM Bucket and Role:\n")
     print(results_df)
+
 
 
 if __name__ == "__main__":

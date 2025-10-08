@@ -19,9 +19,8 @@ if __name__ == "__main__":
     insight_1_Role()
     insight_1_Bench()
     insight_1_Correlation()
-    bucket_df = insight_1_DBPM_Buckets()
+    insight_1_DBPM_Buckets()
 
-    print(bucket_df )
     insight_2_data_load()
     insight_2_Top_Half()
     insight_2_Bottom_Half()
