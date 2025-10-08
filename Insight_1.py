@@ -10,8 +10,7 @@ def insight_1_Load_Data():
     global player_stats_DF
     
     player_stats_DF = pd.read_csv("Data/Processed/player_stats_cleaned.csv")
-    top_half_df = pd.read_csv("Data/Processed/top_half.csv")
-    bottom_half_df = pd.read_csv("Data/Processed/bottom_half.csv")
+
 
 def insight_1_Starters():
     # Starters
