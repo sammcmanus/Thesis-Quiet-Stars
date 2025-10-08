@@ -32,7 +32,6 @@ When grouping DBPM into performance ranges, the trend is a little more clear:
 
 Teams with role players posting DBPM above 0 average roughly 7–12 more wins than teams with below-average defenders. This pattern mirrors that of starters, just slightly lower in magnitude, which reinforces that strong defensive role players (the quiet stars) make a measurable difference.
 
-### Why It Matters:
-
+## Why It Matters:
 This insight gives statistical proof that role players contribute meaningfully to winning, especially on the defensive side. While starters are the most impactful, role players defensive consistency is what separates good teams from great ones. This supports the hypothesis that a team’s success is shaped not only by its starters, but by the quiet stars, efficient defenders who fill vital roles around them.
 
