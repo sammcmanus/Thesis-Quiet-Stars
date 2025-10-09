@@ -5,31 +5,29 @@ The project, Quiet Stars, analyzes NBA player and team performance using histori
 ## Hypothesis Statement:
 Teams with deeper, more efficient benches finish with higher win percentages and better seeds than teams that lean heavily on a few high-usage or very young players.
 
-# Contents
+### 📚 Table of Contents
 
-* ### [Data Sources](#public-dataset)
+- **[Data Sources](#data-sources)**
+- **[Data Cleaning](#data-cleaning)**
+  - [Row Filtering](#row-filtering)
+  - [Column Standardization](#column-standardization)
+  - [Impute Values](#impute-values)
+  - [Merge](#merge)
+  - [Rounding](#rounding)
+  - [Derived Fields](#derived-fields)
+  - [Row Exclusion After Labeling](#row-exclusion-after-labeling)
+  - [Output Files](#output-files)
+  - [Insight 2 Data Prep](#insight-2-data-prep)
+  - [Columns Used by Table](#columns-used-by-table)
+  - [Notes & Implications](#notes--implications)
+- **[Insight Summaries]()**
+  - [Insight #1: Defensive Metrics and Team Success](Docs/Insight_1.md)
+  - [Insight #2: Role Player Efficiency and Team Success](Docs/Insight_2.md)
+  - [Insight #3: Player Efficiency and Experience](Docs/Insight_3.md)
+- **[Change Log](Docs/Change_Log.md)**
+- **[Terminology Definitions](Docs/Terminology_Definition.md)**
+- **[Project Timeline](Docs/Project_Timeline.md)**
 
-* ### [Data Cleaning](#data-cleaning)
-    * [Row Filtering](#row-filtering)
-    * [Column Standardization](#column-standardization)
-    * [Impute values](#impute-values)
-    * [Merge](#merge)
-    * [Rounding](#rounding)
-    * [Derived fields](#derived-fields)
-    * [Row exclusion after labeling](#row-exclusion-after-labeling)
-    * [Output Files](#output-files)
-    * [Insight 2 Data Prep](#insight-2-data-prep)
-    * [Columns Used By Table](#columns-used-by-table)
-    * [Notes & Implications](#notes--implications)
-
-* ### Insight Summaries
-    * [#1: Defensive Metrics and How They Support Team Success](Docs/Insight_1.md)
-    * [#2: Role Player Efficiency and How It Supports Team Success](Docs/Insight_2.md)
-    * [#3: Player Efficiency and Its Correlation to Experience]()
-
-* ### [Change Log](Docs/Change_Log.md)
-* ### [Terminology Definitions](Docs/Terminology_Definition.md)
-* ### [Project Timeline](Docs/Project_Timeline.md)
 
 <BR>
 
