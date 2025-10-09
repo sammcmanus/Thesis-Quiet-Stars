@@ -20,11 +20,12 @@
 
 ## Week 3 - (10/2 - 10/09)
     
-    Insight 1 added images to be saved insert of just popping up.
-    Insight 1 added calculated coefficients and documented them.
-    Insight 2 added images to be saved insert of just popping up.
-    Insight 2 added calculated stats and documented them.
-    Insight 3 added calculated stats and documented them.
+    Insight 1: Added images to be saved insert of just popping up.
+    Insight 1: Added calculated coefficients and documented them.
+    Insight 2: Added images to be saved insert of just popping up.
+    Insight 2: Added calculated stats and documented them.
+    Insight 3: Added calculated stats and documented them.
+    Documentation: Added terminologies definitions, corrected errors, fixed formatting, updated project timeline & change logs.
 
 ## Week 4 - (10/09 - 10/16)
 
