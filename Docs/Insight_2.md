@@ -36,7 +36,7 @@ While the result is not statistically significant at the 95% confidence level, t
 Teams in the top half of the standings have more role players with efficiency ratings (PER) above 15 compared to bottom half teams. This supports the hypothesis by showing that efficient role players the “quiet stars” give their teams an edge in winning.
 
 ## Why It Matters:
-This insight highlights how efficiency, not just minutes or raw stats, separates average teams from successful ones. Having role players who perform at or above league average efficiency is often what pushes a team into the top half of the standings, reinforcing the idea that the quiet stars play a real role in winning.
+This insight highlights how efficiency separates average teams from successful ones. Having role players who perform at or above league average efficiency is often what pushes a team into the top half of the standings, reinforcing the idea that the quiet stars play a real role in winning.
 
 
 

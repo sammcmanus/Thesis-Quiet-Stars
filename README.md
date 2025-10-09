@@ -7,9 +7,9 @@ Teams with deeper, more efficient benches finish with higher win percentages and
 
 # Contents
 
-* [Data Sources](#public-dataset)
+* ### [Data Sources](#public-dataset)
 
-* [Data Cleaning](#data-cleaning)
+* ### [Data Cleaning](#data-cleaning)
     * [Row Filtering](#row-filtering)
     * [Column Standardization](#column-standardization)
     * [Impute values](#impute-values)
@@ -22,14 +22,14 @@ Teams with deeper, more efficient benches finish with higher win percentages and
     * [Columns Used By Table](#columns-used-by-table)
     * [Notes & Implications](#notes--implications)
 
-* [Insight Summaries](#insight-summaries)
+* ### Insight Summaries
     * [#1: Defensive Metrics and How They Support Team Success](Docs/Insight_1.md)
     * [#2: Role Player Efficiency and How It Supports Team Success](Docs/Insight_2.md)
     * [#3: Player Efficiency and Its Correlation to Experience]()
 
-* [Change Log](Docs/Change_Log.md)
-
-* [Project Timeline](Docs/Project_Timeline.md)
+* ### [Change Log](Docs/Change_Log.md)
+* ### [Terminology Definitions](Docs/Terminology_Definition.md)
+* ### [Project Timeline](Docs/Project_Timeline.md)
 
 <BR>
 

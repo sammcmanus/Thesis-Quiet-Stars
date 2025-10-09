@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import numpy as np
 
-# Set your working directory here
+# Set working directory
 set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
 def insight_3_Load_Data():
@@ -11,17 +11,9 @@ def insight_3_Load_Data():
     
     player_stats_DF = pd.read_csv("Data/Processed/player_stats_cleaned.csv")
     
-    # Create a new column 'is_vet' to indicate if a player is a veteran (7 or more years of experience)
-    player_stats_DF["is_vet"] = player_stats_DF["experience"] >= 7
-
-
-def _available(df: pd.DataFrame, cols):
-    return [c for c in cols if c in df.columns]
-
 def _agg_by_group(gb, metrics, weight_col=None):
-    """
-    Build a table with mean/median/IQR and minutes-weighted mean (if weight_col given).
-    """
+    
+    # Aggregate metrics by group with mean, median, IQR, and weighted mean if weight_col is provided.
     rows = []
     for segment, chunk in gb:
         row = {"segment": segment}
@@ -46,58 +38,44 @@ def _agg_by_group(gb, metrics, weight_col=None):
         rows.append(row)
     return pd.DataFrame(rows)
 
-def insight3_efficiency_tables(player_stats_DF: pd.DataFrame) -> dict:
-    """
-    Build efficiency comparison tables for vets vs non-vets.
-
-    Returns:
-      {
-        "overall": DataFrame of vets vs non-vets,
-        "by_role": DataFrame of (role, vet split) if 'role' column exists
-      }
-    """
+def insight3_efficiency_tables() -> dict:
+    
     df = player_stats_DF.copy()
-    if "is_vet" not in df.columns:
-        raise ValueError("Missing 'is_vet'. Add it first with: df['is_vet'] = df['experience'] >= 7")
 
     # compute minutes per season for weighting if columns exist
     weight_col = None
-    if "mp_per_game" in df.columns and "g" in df.columns:
-        df["minutes_weight"] = df["mp_per_game"] * df["g"]
-        weight_col = "minutes_weight"
 
-    # use only metrics that are present in your file
+    df["is_vet"] = df["experience"] >= 7
+
+    df["minutes_weight"] = df["mp_per_game"] * df["g"]
+    weight_col = "minutes_weight"
+
+    # Identify available efficiency metrics
     candidate_metrics = ["per", "ts_percent", "obpm", "dbpm", "usg_percent"]
-    metrics = _available(df, candidate_metrics)
-    if not metrics:
-        raise ValueError("No efficiency metrics found. Expected one or more of: " + ", ".join(candidate_metrics))
+
+    metrics = [c for c in candidate_metrics if c in df.columns]
 
     # drop rows with unknown vet status (NaN experience)
     d = df.dropna(subset=["is_vet"]).copy()
 
     # overall vets vs non-vets
-    overall = _agg_by_group(d.groupby("is_vet"), metrics, weight_col=weight_col)
+    overall_df = _agg_by_group(d.groupby("is_vet"), metrics, weight_col=weight_col)
 
-    # by role (if present)
-    if "role" in d.columns:
-        by_role = _agg_by_group(d.groupby(["role", "is_vet"]), metrics, weight_col=weight_col)
-        by_role["segment"] = by_role["segment"].apply(lambda s: f"{s[0]}|{s[1]}")
-    else:
-        by_role = pd.DataFrame(columns=["segment"] + [f"{m}_{t}" for m in metrics for t in ["mean","median","iqr","wmean"]])
+    # by role and vet status
+    by_role_df = _agg_by_group(d.groupby(["role", "is_vet"]), metrics, weight_col=weight_col)
+    by_role_df["segment"] = by_role_df["segment"].apply(lambda s: f"{s[0]}|{s[1]}")
+      
+    print("\nOverall (vets vs non-vets):\n")
+    print(overall_df)
 
-    return {"overall": overall, "by_role": by_role}
+    print("\nBy Role & Vet (e.i. 'R(role)|True(vet)' ):\n")
+    print(by_role_df.sort_values(by='segment', ascending=False))
 
 
 if __name__ == "__main__":
+
     os.chdir(set_working_dir)
     insight_3_Load_Data()
+    insight3_efficiency_tables()
 
-    tables = insight3_efficiency_tables(player_stats_DF)
-    overall_df = tables["overall"]
-    by_role_df = tables["by_role"]
 
-    print("Overall (vets vs non-vets):")
-    print(overall_df)
-
-    print("\nBy Role (e.g., 'R|True' = Role Player & Veteran):")
-    print(by_role_df)
