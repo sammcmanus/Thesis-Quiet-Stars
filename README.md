@@ -8,6 +8,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
 ### 📚 Table of Contents
 
 - **[Data Sources](#data-sources)**
+- **[Terminology Definitions](Docs/Terminology_Definition.md)**
 - **[Data Cleaning](#data-cleaning)**
   - [Row Filtering](#row-filtering)
   - [Column Standardization](#column-standardization)
@@ -25,7 +26,6 @@ Teams with deeper, more efficient benches finish with higher win percentages and
   - [Insight #2: Role Player Efficiency and Team Success](Docs/Insight_2.md)
   - [Insight #3: Player Efficiency and Experience](Docs/Insight_3.md)
 - **[Change Log](Docs/Change_Log.md)**
-- **[Terminology Definitions](Docs/Terminology_Definition.md)**
 - **[Project Timeline](Docs/Project_Timeline.md)**
 
 
