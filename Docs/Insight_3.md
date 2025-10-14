@@ -34,11 +34,12 @@ Starters show the clearest veteran edge in both PER and DBPM.
 Role players remain nearly identical between groups.
 <BR>
 Bench veterans trend slightly lower in offensive efficiency but improve in defensive stability.
-<BR><BR>
+<BR>
 
-## Connection to the Hypothesis:
 This analysis tested whether veteran players—those with more than seven years of experience showed meaningfully higher efficiency.
 Across all roles, veterans had slightly higher PER (14.60 vs 14.38) and marginally better DBPM (+0.14 vs –0.08), but nearly identical TS% (0.538 vs 0.539). Within role players specifically, veterans averaged PER 12.91 vs 13.05 for non-veterans and showed similar shooting efficiency. These small differences, insignificant p-value, suggests that experience alone does not drive efficiency gains among role players. 
+
+<BR><BR>
 
 ## Why It Matters:
 This insight clarifies that veteran presence while valuable does not automatically translate into higher measurable efficiency. It emphasizes that effective role performance isn’t purely a function of experience. It may depend on how players are utilized and supported within team systems. Teams that balance veteran insight with younger energy may sustain efficiency more effectively.

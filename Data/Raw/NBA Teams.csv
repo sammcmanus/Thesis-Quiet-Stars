@@ -1,0 +1,783 @@
+season,team name,abv,conference,division
+2000,Atlanta Hawks,ATL,Eastern,Central
+2000,Boston Celtics,BOS,Eastern,Atlantic
+2000,Charlotte Hornets,CHH,Eastern,Central
+2000,Chicago Bulls,CHI,Eastern,Central
+2000,Cleveland Cavaliers,CLE,Eastern,Central
+2000,Dallas Mavericks,DAL,Western,Midwest
+2000,Denver Nuggets,DEN,Western,Midwest
+2000,Detroit Pistons,DET,Eastern,Central
+2000,Golden State Warriors,GSW,Western,Pacific
+2000,Houston Rockets,HOU,Western,Midwest
+2000,Indiana Pacers,IND,Eastern,Central
+2000,Los Angeles Clippers,LAC,Western,Pacific
+2000,Los Angeles Lakers,LAL,Western,Pacific
+2000,Miami Heat,MIA,Eastern,Atlantic
+2000,Milwaukee Bucks,MIL,Eastern,Central
+2000,Minnesota Timberwolves,MIN,Western,Midwest
+2000,New Jersey Nets,NJN,Eastern,Atlantic
+2000,New York Knicks,NYK,Eastern,Atlantic
+2000,Orlando Magic,ORL,Eastern,Atlantic
+2000,Philadelphia 76ers,PHI,Eastern,Atlantic
+2000,Phoenix Suns,PHO,Western,Pacific
+2000,Portland Trail Blazers,POR,Western,Pacific
+2000,Sacramento Kings,SAC,Western,Pacific
+2000,San Antonio Spurs,SAS,Western,Midwest
+2000,Seattle SuperSonics,SEA,Western,Pacific
+2000,Toronto Raptors,TOR,Eastern,Central
+2000,Utah Jazz,UTA,Western,Midwest
+2000,Vancouver Grizzlies,VAN,Western,Midwest
+2001,Vancouver Grizzlies,VAN,Western,Midwest
+2000,Washington Wizards,WAS,Eastern,Atlantic
+2001,Atlanta Hawks,ATL,Eastern,Central
+2001,Boston Celtics,BOS,Eastern,Atlantic
+2001,Charlotte Hornets,CHH,Eastern,Central
+2002,Charlotte Hornets,CHH,Eastern,Central
+2001,Chicago Bulls,CHI,Eastern,Central
+2001,Cleveland Cavaliers,CLE,Eastern,Central
+2001,Dallas Mavericks,DAL,Western,Midwest
+2001,Denver Nuggets,DEN,Western,Midwest
+2001,Detroit Pistons,DET,Eastern,Central
+2001,Golden State Warriors,GSW,Western,Pacific
+2001,Houston Rockets,HOU,Western,Midwest
+2001,Indiana Pacers,IND,Eastern,Central
+2001,Los Angeles Clippers,LAC,Western,Pacific
+2001,Los Angeles Lakers,LAL,Western,Pacific
+2001,Memphis Grizzlies,MEM,Western,Midwest
+2001,Miami Heat,MIA,Eastern,Atlantic
+2001,Milwaukee Bucks,MIL,Eastern,Central
+2001,Minnesota Timberwolves,MIN,Western,Midwest
+2001,New Jersey Nets,NJN,Eastern,Atlantic
+2001,New York Knicks,NYK,Eastern,Atlantic
+2001,Orlando Magic,ORL,Eastern,Atlantic
+2001,Philadelphia 76ers,PHI,Eastern,Atlantic
+2001,Phoenix Suns,PHO,Western,Pacific
+2001,Portland Trail Blazers,POR,Western,Pacific
+2001,Sacramento Kings,SAC,Western,Pacific
+2001,San Antonio Spurs,SAS,Western,Midwest
+2001,Seattle SuperSonics,SEA,Western,Pacific
+2001,Toronto Raptors,TOR,Eastern,Central
+2001,Utah Jazz,UTA,Western,Midwest
+2001,Washington Wizards,WAS,Eastern,Atlantic
+2002,Atlanta Hawks,ATL,Eastern,Central
+2002,Boston Celtics,BOS,Eastern,Atlantic
+2002,Chicago Bulls,CHI,Eastern,Central
+2002,Cleveland Cavaliers,CLE,Eastern,Central
+2002,Dallas Mavericks,DAL,Western,Midwest
+2002,Denver Nuggets,DEN,Western,Midwest
+2002,Detroit Pistons,DET,Eastern,Central
+2002,Golden State Warriors,GSW,Western,Pacific
+2002,Houston Rockets,HOU,Western,Midwest
+2002,Indiana Pacers,IND,Eastern,Central
+2002,Los Angeles Clippers,LAC,Western,Pacific
+2002,Los Angeles Lakers,LAL,Western,Pacific
+2002,Memphis Grizzlies,MEM,Western,Midwest
+2002,Miami Heat,MIA,Eastern,Atlantic
+2002,Milwaukee Bucks,MIL,Eastern,Central
+2002,Minnesota Timberwolves,MIN,Western,Midwest
+2002,New Jersey Nets,NJN,Eastern,Atlantic
+2002,New Orleans Hornets,NOH,Eastern,Central
+2002,New York Knicks,NYK,Eastern,Atlantic
+2002,Orlando Magic,ORL,Eastern,Atlantic
+2002,Philadelphia 76ers,PHI,Eastern,Atlantic
+2002,Phoenix Suns,PHO,Western,Pacific
+2002,Portland Trail Blazers,POR,Western,Pacific
+2002,Sacramento Kings,SAC,Western,Pacific
+2002,San Antonio Spurs,SAS,Western,Midwest
+2002,Seattle SuperSonics,SEA,Western,Pacific
+2002,Toronto Raptors,TOR,Eastern,Central
+2002,Utah Jazz,UTA,Western,Midwest
+2002,Washington Wizards,WAS,Eastern,Atlantic
+2003,Atlanta Hawks,ATL,Eastern,Central
+2003,Boston Celtics,BOS,Eastern,Atlantic
+2003,Chicago Bulls,CHI,Eastern,Central
+2003,Cleveland Cavaliers,CLE,Eastern,Central
+2003,Dallas Mavericks,DAL,Western,Midwest
+2003,Denver Nuggets,DEN,Western,Midwest
+2003,Detroit Pistons,DET,Eastern,Central
+2003,Golden State Warriors,GSW,Western,Pacific
+2003,Houston Rockets,HOU,Western,Midwest
+2003,Indiana Pacers,IND,Eastern,Central
+2003,Los Angeles Clippers,LAC,Western,Pacific
+2003,Los Angeles Lakers,LAL,Western,Pacific
+2003,Memphis Grizzlies,MEM,Western,Midwest
+2003,Miami Heat,MIA,Eastern,Atlantic
+2003,Milwaukee Bucks,MIL,Eastern,Central
+2003,Minnesota Timberwolves,MIN,Western,Midwest
+2003,New Jersey Nets,NJN,Eastern,Atlantic
+2003,New Orleans Hornets,NOH,Eastern,Central
+2003,New York Knicks,NYK,Eastern,Atlantic
+2003,Orlando Magic,ORL,Eastern,Atlantic
+2003,Philadelphia 76ers,PHI,Eastern,Atlantic
+2003,Phoenix Suns,PHO,Western,Pacific
+2003,Portland Trail Blazers,POR,Western,Pacific
+2003,Sacramento Kings,SAC,Western,Pacific
+2003,San Antonio Spurs,SAS,Western,Midwest
+2003,Seattle SuperSonics,SEA,Western,Pacific
+2003,Toronto Raptors,TOR,Eastern,Central
+2003,Utah Jazz,UTA,Western,Midwest
+2003,Washington Wizards,WAS,Eastern,Atlantic
+2004,Atlanta Hawks,ATL,Eastern,Southeast
+2004,Boston Celtics,BOS,Eastern,Atlantic
+2004,Charlotte Bobcats,CHA,Eastern,Southeast
+2004,Chicago Bulls,CHI,Eastern,Central
+2004,Cleveland Cavaliers,CLE,Eastern,Central
+2004,Dallas Mavericks,DAL,Western,Southwest
+2004,Denver Nuggets,DEN,Western,Northwest
+2004,Detroit Pistons,DET,Eastern,Central
+2004,Golden State Warriors,GSW,Western,Pacific
+2004,Houston Rockets,HOU,Western,Southwest
+2004,Indiana Pacers,IND,Eastern,Central
+2004,Los Angeles Clippers,LAC,Western,Pacific
+2004,Los Angeles Lakers,LAL,Western,Pacific
+2004,Memphis Grizzlies,MEM,Western,Southwest
+2004,Miami Heat,MIA,Eastern,Southeast
+2004,Milwaukee Bucks,MIL,Eastern,Central
+2004,Minnesota Timberwolves,MIN,Western,Northwest
+2004,New Jersey Nets,NJN,Eastern,Atlantic
+2004,New Orleans Hornets,NOH,Western,Southwest
+2004,New York Knicks,NYK,Eastern,Atlantic
+2004,Orlando Magic,ORL,Eastern,Southeast
+2004,Philadelphia 76ers,PHI,Eastern,Atlantic
+2004,Phoenix Suns,PHO,Western,Pacific
+2004,Portland Trail Blazers,POR,Western,Northwest
+2004,Sacramento Kings,SAC,Western,Pacific
+2004,San Antonio Spurs,SAS,Western,Southwest
+2004,Seattle SuperSonics,SEA,Western,Northwest
+2004,Toronto Raptors,TOR,Eastern,Atlantic
+2004,Utah Jazz,UTA,Western,Northwest
+2004,Washington Wizards,WAS,Eastern,Southeast
+2005,Atlanta Hawks,ATL,Eastern,Southeast
+2005,Boston Celtics,BOS,Eastern,Atlantic
+2005,Charlotte Bobcats,CHA,Eastern,Southeast
+2005,Chicago Bulls,CHI,Eastern,Central
+2005,Cleveland Cavaliers,CLE,Eastern,Central
+2005,Dallas Mavericks,DAL,Western,Southwest
+2005,Denver Nuggets,DEN,Western,Northwest
+2005,Detroit Pistons,DET,Eastern,Central
+2005,Golden State Warriors,GSW,Western,Pacific
+2005,Houston Rockets,HOU,Western,Southwest
+2005,Indiana Pacers,IND,Eastern,Central
+2005,Los Angeles Clippers,LAC,Western,Pacific
+2005,Los Angeles Lakers,LAL,Western,Pacific
+2005,Memphis Grizzlies,MEM,Western,Southwest
+2005,Miami Heat,MIA,Eastern,Southeast
+2005,Milwaukee Bucks,MIL,Eastern,Central
+2005,Minnesota Timberwolves,MIN,Western,Northwest
+2005,New Jersey Nets,NJN,Eastern,Atlantic
+2005,New Orleans/Oklahoma City Hornets,NOH,Western,Southwest
+2005,New York Knicks,NYK,Eastern,Atlantic
+2005,Orlando Magic,ORL,Eastern,Southeast
+2005,Philadelphia 76ers,PHI,Eastern,Atlantic
+2005,Phoenix Suns,PHO,Western,Pacific
+2005,Portland Trail Blazers,POR,Western,Northwest
+2005,Sacramento Kings,SAC,Western,Pacific
+2005,San Antonio Spurs,SAS,Western,Southwest
+2005,Seattle SuperSonics,SEA,Western,Northwest
+2005,Toronto Raptors,TOR,Eastern,Atlantic
+2005,Utah Jazz,UTA,Western,Northwest
+2005,Washington Wizards,WAS,Eastern,Southeast
+2006,Atlanta Hawks,ATL,Eastern,Southeast
+2006,Boston Celtics,BOS,Eastern,Atlantic
+2006,Charlotte Bobcats,CHA,Eastern,Southeast
+2006,Chicago Bulls,CHI,Eastern,Central
+2006,Cleveland Cavaliers,CLE,Eastern,Central
+2006,Dallas Mavericks,DAL,Western,Southwest
+2006,Denver Nuggets,DEN,Western,Northwest
+2006,Detroit Pistons,DET,Eastern,Central
+2006,Golden State Warriors,GSW,Western,Pacific
+2006,Houston Rockets,HOU,Western,Southwest
+2006,Indiana Pacers,IND,Eastern,Central
+2006,Los Angeles Clippers,LAC,Western,Pacific
+2006,Los Angeles Lakers,LAL,Western,Pacific
+2006,Memphis Grizzlies,MEM,Western,Southwest
+2006,Miami Heat,MIA,Eastern,Southeast
+2006,Milwaukee Bucks,MIL,Eastern,Central
+2006,Minnesota Timberwolves,MIN,Western,Northwest
+2006,New Jersey Nets,NJN,Eastern,Atlantic
+2006,New Orleans/Oklahoma City Hornets,NOK,Western,Southwest
+2006,New York Knicks,NYK,Eastern,Atlantic
+2006,Orlando Magic,ORL,Eastern,Southeast
+2006,Philadelphia 76ers,PHI,Eastern,Atlantic
+2006,Phoenix Suns,PHO,Western,Pacific
+2006,Portland Trail Blazers,POR,Western,Northwest
+2006,Sacramento Kings,SAC,Western,Pacific
+2006,San Antonio Spurs,SAS,Western,Southwest
+2006,Seattle SuperSonics,SEA,Western,Northwest
+2006,Toronto Raptors,TOR,Eastern,Atlantic
+2006,Utah Jazz,UTA,Western,Northwest
+2006,Washington Wizards,WAS,Eastern,Southeast
+2007,Atlanta Hawks,ATL,Eastern,Southeast
+2007,Boston Celtics,BOS,Eastern,Atlantic
+2007,Charlotte Bobcats,CHA,Eastern,Southeast
+2007,Chicago Bulls,CHI,Eastern,Central
+2007,Cleveland Cavaliers,CLE,Eastern,Central
+2007,Dallas Mavericks,DAL,Western,Southwest
+2007,Denver Nuggets,DEN,Western,Northwest
+2007,Detroit Pistons,DET,Eastern,Central
+2007,Golden State Warriors,GSW,Western,Pacific
+2007,Houston Rockets,HOU,Western,Southwest
+2007,Indiana Pacers,IND,Eastern,Central
+2007,Los Angeles Clippers,LAC,Western,Pacific
+2007,Los Angeles Lakers,LAL,Western,Pacific
+2007,Memphis Grizzlies,MEM,Western,Southwest
+2007,Miami Heat,MIA,Eastern,Southeast
+2007,Milwaukee Bucks,MIL,Eastern,Central
+2007,Minnesota Timberwolves,MIN,Western,Northwest
+2007,New Jersey Nets,NJN,Eastern,Atlantic
+2007,New Orleans Hornets,NOK,Western,Southwest
+2007,New York Knicks,NYK,Eastern,Atlantic
+2007,Orlando Magic,ORL,Eastern,Southeast
+2007,Philadelphia 76ers,PHI,Eastern,Atlantic
+2007,Phoenix Suns,PHO,Western,Pacific
+2007,Portland Trail Blazers,POR,Western,Northwest
+2007,Sacramento Kings,SAC,Western,Pacific
+2007,San Antonio Spurs,SAS,Western,Southwest
+2007,Seattle SuperSonics,SEA,Western,Northwest
+2008,Seattle SuperSonics,SEA,Western,Northwest
+2007,Toronto Raptors,TOR,Eastern,Atlantic
+2007,Utah Jazz,UTA,Western,Northwest
+2007,Washington Wizards,WAS,Eastern,Southeast
+2008,Atlanta Hawks,ATL,Eastern,Southeast
+2008,Boston Celtics,BOS,Eastern,Atlantic
+2008,Charlotte Bobcats,CHA,Eastern,Southeast
+2008,Chicago Bulls,CHI,Eastern,Central
+2008,Cleveland Cavaliers,CLE,Eastern,Central
+2008,Dallas Mavericks,DAL,Western,Southwest
+2008,Denver Nuggets,DEN,Western,Northwest
+2008,Detroit Pistons,DET,Eastern,Central
+2008,Golden State Warriors,GSW,Western,Pacific
+2008,Houston Rockets,HOU,Western,Southwest
+2008,Indiana Pacers,IND,Eastern,Central
+2008,Los Angeles Clippers,LAC,Western,Pacific
+2008,Los Angeles Lakers,LAL,Western,Pacific
+2008,Memphis Grizzlies,MEM,Western,Southwest
+2008,Miami Heat,MIA,Eastern,Southeast
+2008,Milwaukee Bucks,MIL,Eastern,Central
+2008,Minnesota Timberwolves,MIN,Western,Northwest
+2008,New Jersey Nets,NJN,Eastern,Atlantic
+2008,New Orleans Hornets,NOH,Western,Southwest
+2008,New York Knicks,NYK,Eastern,Atlantic
+2008,Oklahoma City Thunder,OKC,Western,Northwest
+2008,Orlando Magic,ORL,Eastern,Southeast
+2008,Philadelphia 76ers,PHI,Eastern,Atlantic
+2008,Phoenix Suns,PHO,Western,Pacific
+2008,Portland Trail Blazers,POR,Western,Northwest
+2008,Sacramento Kings,SAC,Western,Pacific
+2008,San Antonio Spurs,SAS,Western,Southwest
+2008,Toronto Raptors,TOR,Eastern,Atlantic
+2008,Utah Jazz,UTA,Western,Northwest
+2008,Washington Wizards,WAS,Eastern,Southeast
+2009,Atlanta Hawks,ATL,Eastern,Southeast
+2009,Boston Celtics,BOS,Eastern,Atlantic
+2009,Charlotte Bobcats,CHA,Eastern,Southeast
+2009,Chicago Bulls,CHI,Eastern,Central
+2009,Cleveland Cavaliers,CLE,Eastern,Central
+2009,Dallas Mavericks,DAL,Western,Southwest
+2009,Denver Nuggets,DEN,Western,Northwest
+2009,Detroit Pistons,DET,Eastern,Central
+2009,Golden State Warriors,GSW,Western,Pacific
+2009,Houston Rockets,HOU,Western,Southwest
+2009,Indiana Pacers,IND,Eastern,Central
+2009,Los Angeles Clippers,LAC,Western,Pacific
+2009,Los Angeles Lakers,LAL,Western,Pacific
+2009,Memphis Grizzlies,MEM,Western,Southwest
+2009,Miami Heat,MIA,Eastern,Southeast
+2009,Milwaukee Bucks,MIL,Eastern,Central
+2009,Minnesota Timberwolves,MIN,Western,Northwest
+2009,New Jersey Nets,NJN,Eastern,Atlantic
+2009,New Orleans Hornets,NOH,Western,Southwest
+2009,New York Knicks,NYK,Eastern,Atlantic
+2009,Oklahoma City Thunder,OKC,Western,Northwest
+2009,Orlando Magic,ORL,Eastern,Southeast
+2009,Philadelphia 76ers,PHI,Eastern,Atlantic
+2009,Phoenix Suns,PHO,Western,Pacific
+2009,Portland Trail Blazers,POR,Western,Northwest
+2009,Sacramento Kings,SAC,Western,Pacific
+2009,San Antonio Spurs,SAS,Western,Southwest
+2009,Toronto Raptors,TOR,Eastern,Atlantic
+2009,Utah Jazz,UTA,Western,Northwest
+2009,Washington Wizards,WAS,Eastern,Southeast
+2010,Atlanta Hawks,ATL,Eastern,Southeast
+2010,Boston Celtics,BOS,Eastern,Atlantic
+2010,Charlotte Bobcats,CHA,Eastern,Southeast
+2010,Chicago Bulls,CHI,Eastern,Central
+2010,Cleveland Cavaliers,CLE,Eastern,Central
+2010,Dallas Mavericks,DAL,Western,Southwest
+2010,Denver Nuggets,DEN,Western,Northwest
+2010,Detroit Pistons,DET,Eastern,Central
+2010,Golden State Warriors,GSW,Western,Pacific
+2010,Houston Rockets,HOU,Western,Southwest
+2010,Indiana Pacers,IND,Eastern,Central
+2010,Los Angeles Clippers,LAC,Western,Pacific
+2010,Los Angeles Lakers,LAL,Western,Pacific
+2010,Memphis Grizzlies,MEM,Western,Southwest
+2010,Miami Heat,MIA,Eastern,Southeast
+2010,Milwaukee Bucks,MIL,Eastern,Central
+2010,Minnesota Timberwolves,MIN,Western,Northwest
+2010,New Jersey Nets,NJN,Eastern,Atlantic
+2012,New Jersey Nets,NJN,Eastern,Atlantic
+2010,New Orleans Hornets,NOH,Western,Southwest
+2010,New York Knicks,NYK,Eastern,Atlantic
+2010,Oklahoma City Thunder,OKC,Western,Northwest
+2010,Orlando Magic,ORL,Eastern,Southeast
+2010,Philadelphia 76ers,PHI,Eastern,Atlantic
+2010,Phoenix Suns,PHO,Western,Pacific
+2010,Portland Trail Blazers,POR,Western,Northwest
+2010,Sacramento Kings,SAC,Western,Pacific
+2010,San Antonio Spurs,SAS,Western,Southwest
+2010,Toronto Raptors,TOR,Eastern,Atlantic
+2010,Utah Jazz,UTA,Western,Northwest
+2010,Washington Wizards,WAS,Eastern,Southeast
+2011,Atlanta Hawks,ATL,Eastern,Southeast
+2011,Boston Celtics,BOS,Eastern,Atlantic
+2011,Charlotte Bobcats,CHA,Eastern,Southeast
+2011,Chicago Bulls,CHI,Eastern,Central
+2011,Cleveland Cavaliers,CLE,Eastern,Central
+2011,Dallas Mavericks,DAL,Western,Southwest
+2011,Denver Nuggets,DEN,Western,Northwest
+2011,Detroit Pistons,DET,Eastern,Central
+2011,Golden State Warriors,GSW,Western,Pacific
+2011,Houston Rockets,HOU,Western,Southwest
+2011,Indiana Pacers,IND,Eastern,Central
+2011,Los Angeles Clippers,LAC,Western,Pacific
+2011,Los Angeles Lakers,LAL,Western,Pacific
+2011,Memphis Grizzlies,MEM,Western,Southwest
+2011,Miami Heat,MIA,Eastern,Southeast
+2011,Milwaukee Bucks,MIL,Eastern,Central
+2011,Minnesota Timberwolves,MIN,Western,Northwest
+2011,New Jersey Nets,NJN,Eastern,Atlantic
+2011,New Orleans Hornets,NOH,Western,Southwest
+2011,New York Knicks,NYK,Eastern,Atlantic
+2011,Oklahoma City Thunder,OKC,Western,Northwest
+2011,Orlando Magic,ORL,Eastern,Southeast
+2011,Philadelphia 76ers,PHI,Eastern,Atlantic
+2011,Phoenix Suns,PHO,Western,Pacific
+2011,Portland Trail Blazers,POR,Western,Northwest
+2011,Sacramento Kings,SAC,Western,Pacific
+2011,San Antonio Spurs,SAS,Western,Southwest
+2011,Toronto Raptors,TOR,Eastern,Atlantic
+2011,Utah Jazz,UTA,Western,Northwest
+2011,Washington Wizards,WAS,Eastern,Southeast
+2012,Atlanta Hawks,ATL,Eastern,Southeast
+2012,Boston Celtics,BOS,Eastern,Atlantic
+2012,Brooklyn Nets,BRK,Eastern,Atlantic
+2012,Charlotte Bobcats,CHA,Eastern,Southeast
+2012,Chicago Bulls,CHI,Eastern,Central
+2012,Cleveland Cavaliers,CLE,Eastern,Central
+2012,Dallas Mavericks,DAL,Western,Southwest
+2012,Denver Nuggets,DEN,Western,Northwest
+2012,Detroit Pistons,DET,Eastern,Central
+2012,Golden State Warriors,GSW,Western,Pacific
+2012,Houston Rockets,HOU,Western,Southwest
+2012,Indiana Pacers,IND,Eastern,Central
+2012,Los Angeles Clippers,LAC,Western,Pacific
+2012,Los Angeles Lakers,LAL,Western,Pacific
+2012,Memphis Grizzlies,MEM,Western,Southwest
+2012,Miami Heat,MIA,Eastern,Southeast
+2012,Milwaukee Bucks,MIL,Eastern,Central
+2012,Minnesota Timberwolves,MIN,Western,Northwest
+2013,New Orleans Hornets,NOH,Western,Southwest
+2012,New Orleans Hornets,NOH,Western,Southwest
+2012,New York Knicks,NYK,Eastern,Atlantic
+2012,Oklahoma City Thunder,OKC,Western,Northwest
+2012,Orlando Magic,ORL,Eastern,Southeast
+2012,Philadelphia 76ers,PHI,Eastern,Atlantic
+2012,Phoenix Suns,PHO,Western,Pacific
+2012,Portland Trail Blazers,POR,Western,Northwest
+2012,Sacramento Kings,SAC,Western,Pacific
+2012,San Antonio Spurs,SAS,Western,Southwest
+2012,Toronto Raptors,TOR,Eastern,Atlantic
+2012,Utah Jazz,UTA,Western,Northwest
+2012,Washington Wizards,WAS,Eastern,Southeast
+2013,Atlanta Hawks,ATL,Eastern,Southeast
+2013,Boston Celtics,BOS,Eastern,Atlantic
+2013,Brooklyn Nets,BRK,Eastern,Atlantic
+2014,Charlotte Bobcats,CHA,Eastern,Southeast
+2013,Charlotte Bobcats,CHA,Eastern,Southeast
+2013,Chicago Bulls,CHI,Eastern,Central
+2013,Cleveland Cavaliers,CLE,Eastern,Central
+2013,Dallas Mavericks,DAL,Western,Southwest
+2013,Denver Nuggets,DEN,Western,Northwest
+2013,Detroit Pistons,DET,Eastern,Central
+2013,Golden State Warriors,GSW,Western,Pacific
+2013,Houston Rockets,HOU,Western,Southwest
+2013,Indiana Pacers,IND,Eastern,Central
+2013,Los Angeles Clippers,LAC,Western,Pacific
+2013,Los Angeles Lakers,LAL,Western,Pacific
+2013,Memphis Grizzlies,MEM,Western,Southwest
+2013,Miami Heat,MIA,Eastern,Southeast
+2013,Milwaukee Bucks,MIL,Eastern,Central
+2013,Minnesota Timberwolves,MIN,Western,Northwest
+2013,New Orleans Pelicans,NOP,Western,Southwest
+2013,New York Knicks,NYK,Eastern,Atlantic
+2013,Oklahoma City Thunder,OKC,Western,Northwest
+2013,Orlando Magic,ORL,Eastern,Southeast
+2013,Philadelphia 76ers,PHI,Eastern,Atlantic
+2013,Phoenix Suns,PHO,Western,Pacific
+2013,Portland Trail Blazers,POR,Western,Northwest
+2013,Sacramento Kings,SAC,Western,Pacific
+2013,San Antonio Spurs,SAS,Western,Southwest
+2013,Toronto Raptors,TOR,Eastern,Atlantic
+2013,Utah Jazz,UTA,Western,Northwest
+2013,Washington Wizards,WAS,Eastern,Southeast
+2014,Atlanta Hawks,ATL,Eastern,Southeast
+2014,Boston Celtics,BOS,Eastern,Atlantic
+2014,Brooklyn Nets,BRK,Eastern,Atlantic
+2014,Charlotte Hornets,CHA,Eastern,Southeast
+2014,Chicago Bulls,CHI,Eastern,Central
+2014,Cleveland Cavaliers,CLE,Eastern,Central
+2014,Dallas Mavericks,DAL,Western,Southwest
+2014,Denver Nuggets,DEN,Western,Northwest
+2014,Detroit Pistons,DET,Eastern,Central
+2014,Golden State Warriors,GSW,Western,Pacific
+2014,Houston Rockets,HOU,Western,Southwest
+2014,Indiana Pacers,IND,Eastern,Central
+2014,Los Angeles Clippers,LAC,Western,Pacific
+2014,Los Angeles Lakers,LAL,Western,Pacific
+2014,Memphis Grizzlies,MEM,Western,Southwest
+2014,Miami Heat,MIA,Eastern,Southeast
+2014,Milwaukee Bucks,MIL,Eastern,Central
+2014,Minnesota Timberwolves,MIN,Western,Northwest
+2014,New Orleans Pelicans,NOP,Western,Southwest
+2014,New York Knicks,NYK,Eastern,Atlantic
+2014,Oklahoma City Thunder,OKC,Western,Northwest
+2014,Orlando Magic,ORL,Eastern,Southeast
+2014,Philadelphia 76ers,PHI,Eastern,Atlantic
+2014,Phoenix Suns,PHO,Western,Pacific
+2014,Portland Trail Blazers,POR,Western,Northwest
+2014,Sacramento Kings,SAC,Western,Pacific
+2014,San Antonio Spurs,SAS,Western,Southwest
+2014,Toronto Raptors,TOR,Eastern,Atlantic
+2014,Utah Jazz,UTA,Western,Northwest
+2014,Washington Wizards,WAS,Eastern,Southeast
+2015,Atlanta Hawks,ATL,Eastern,Southeast
+2015,Boston Celtics,BOS,Eastern,Atlantic
+2015,Brooklyn Nets,BRK,Eastern,Atlantic
+2015,Charlotte Hornets,CHO,Eastern,Southeast
+2015,Chicago Bulls,CHI,Eastern,Central
+2015,Cleveland Cavaliers,CLE,Eastern,Central
+2015,Dallas Mavericks,DAL,Western,Southwest
+2015,Denver Nuggets,DEN,Western,Northwest
+2015,Detroit Pistons,DET,Eastern,Central
+2015,Golden State Warriors,GSW,Western,Pacific
+2015,Houston Rockets,HOU,Western,Southwest
+2015,Indiana Pacers,IND,Eastern,Central
+2015,Los Angeles Clippers,LAC,Western,Pacific
+2015,Los Angeles Lakers,LAL,Western,Pacific
+2015,Memphis Grizzlies,MEM,Western,Southwest
+2015,Miami Heat,MIA,Eastern,Southeast
+2015,Milwaukee Bucks,MIL,Eastern,Central
+2015,Minnesota Timberwolves,MIN,Western,Northwest
+2015,New Orleans Pelicans,NOP,Western,Southwest
+2015,New York Knicks,NYK,Eastern,Atlantic
+2015,Oklahoma City Thunder,OKC,Western,Northwest
+2015,Orlando Magic,ORL,Eastern,Southeast
+2015,Philadelphia 76ers,PHI,Eastern,Atlantic
+2015,Phoenix Suns,PHO,Western,Pacific
+2015,Portland Trail Blazers,POR,Western,Northwest
+2015,Sacramento Kings,SAC,Western,Pacific
+2015,San Antonio Spurs,SAS,Western,Southwest
+2015,Toronto Raptors,TOR,Eastern,Atlantic
+2015,Utah Jazz,UTA,Western,Northwest
+2015,Washington Wizards,WAS,Eastern,Southeast
+2016,Atlanta Hawks,ATL,Eastern,Southeast
+2016,Boston Celtics,BOS,Eastern,Atlantic
+2016,Brooklyn Nets,BRK,Eastern,Atlantic
+2016,Charlotte Hornets,CHO,Eastern,Southeast
+2016,Chicago Bulls,CHI,Eastern,Central
+2016,Cleveland Cavaliers,CLE,Eastern,Central
+2016,Dallas Mavericks,DAL,Western,Southwest
+2016,Denver Nuggets,DEN,Western,Northwest
+2016,Detroit Pistons,DET,Eastern,Central
+2016,Golden State Warriors,GSW,Western,Pacific
+2016,Houston Rockets,HOU,Western,Southwest
+2016,Indiana Pacers,IND,Eastern,Central
+2016,Los Angeles Clippers,LAC,Western,Pacific
+2016,Los Angeles Lakers,LAL,Western,Pacific
+2016,Memphis Grizzlies,MEM,Western,Southwest
+2016,Miami Heat,MIA,Eastern,Southeast
+2016,Milwaukee Bucks,MIL,Eastern,Central
+2016,Minnesota Timberwolves,MIN,Western,Northwest
+2016,New Orleans Pelicans,NOP,Western,Southwest
+2016,New York Knicks,NYK,Eastern,Atlantic
+2016,Oklahoma City Thunder,OKC,Western,Northwest
+2016,Orlando Magic,ORL,Eastern,Southeast
+2016,Philadelphia 76ers,PHI,Eastern,Atlantic
+2016,Phoenix Suns,PHO,Western,Pacific
+2016,Portland Trail Blazers,POR,Western,Northwest
+2016,Sacramento Kings,SAC,Western,Pacific
+2016,San Antonio Spurs,SAS,Western,Southwest
+2016,Toronto Raptors,TOR,Eastern,Atlantic
+2016,Utah Jazz,UTA,Western,Northwest
+2016,Washington Wizards,WAS,Eastern,Southeast
+2017,Atlanta Hawks,ATL,Eastern,Southeast
+2017,Boston Celtics,BOS,Eastern,Atlantic
+2017,Brooklyn Nets,BRK,Eastern,Atlantic
+2017,Charlotte Hornets,CHO,Eastern,Southeast
+2017,Chicago Bulls,CHI,Eastern,Central
+2017,Cleveland Cavaliers,CLE,Eastern,Central
+2017,Dallas Mavericks,DAL,Western,Southwest
+2017,Denver Nuggets,DEN,Western,Northwest
+2017,Detroit Pistons,DET,Eastern,Central
+2017,Golden State Warriors,GSW,Western,Pacific
+2017,Houston Rockets,HOU,Western,Southwest
+2017,Indiana Pacers,IND,Eastern,Central
+2017,Los Angeles Clippers,LAC,Western,Pacific
+2017,Los Angeles Lakers,LAL,Western,Pacific
+2017,Memphis Grizzlies,MEM,Western,Southwest
+2017,Miami Heat,MIA,Eastern,Southeast
+2017,Milwaukee Bucks,MIL,Eastern,Central
+2017,Minnesota Timberwolves,MIN,Western,Northwest
+2017,New Orleans Pelicans,NOP,Western,Southwest
+2017,New York Knicks,NYK,Eastern,Atlantic
+2017,Oklahoma City Thunder,OKC,Western,Northwest
+2017,Orlando Magic,ORL,Eastern,Southeast
+2017,Philadelphia 76ers,PHI,Eastern,Atlantic
+2017,Phoenix Suns,PHO,Western,Pacific
+2017,Portland Trail Blazers,POR,Western,Northwest
+2017,Sacramento Kings,SAC,Western,Pacific
+2017,San Antonio Spurs,SAS,Western,Southwest
+2017,Toronto Raptors,TOR,Eastern,Atlantic
+2017,Utah Jazz,UTA,Western,Northwest
+2017,Washington Wizards,WAS,Eastern,Southeast
+2018,Atlanta Hawks,ATL,Eastern,Southeast
+2018,Boston Celtics,BOS,Eastern,Atlantic
+2018,Brooklyn Nets,BRK,Eastern,Atlantic
+2018,Charlotte Hornets,CHO,Eastern,Southeast
+2018,Chicago Bulls,CHI,Eastern,Central
+2018,Cleveland Cavaliers,CLE,Eastern,Central
+2018,Dallas Mavericks,DAL,Western,Southwest
+2018,Denver Nuggets,DEN,Western,Northwest
+2018,Detroit Pistons,DET,Eastern,Central
+2018,Golden State Warriors,GSW,Western,Pacific
+2018,Houston Rockets,HOU,Western,Southwest
+2018,Indiana Pacers,IND,Eastern,Central
+2018,Los Angeles Clippers,LAC,Western,Pacific
+2018,Los Angeles Lakers,LAL,Western,Pacific
+2018,Memphis Grizzlies,MEM,Western,Southwest
+2018,Miami Heat,MIA,Eastern,Southeast
+2018,Milwaukee Bucks,MIL,Eastern,Central
+2018,Minnesota Timberwolves,MIN,Western,Northwest
+2018,New Orleans Pelicans,NOP,Western,Southwest
+2018,New York Knicks,NYK,Eastern,Atlantic
+2018,Oklahoma City Thunder,OKC,Western,Northwest
+2018,Orlando Magic,ORL,Eastern,Southeast
+2018,Philadelphia 76ers,PHI,Eastern,Atlantic
+2018,Phoenix Suns,PHO,Western,Pacific
+2018,Portland Trail Blazers,POR,Western,Northwest
+2018,Sacramento Kings,SAC,Western,Pacific
+2018,San Antonio Spurs,SAS,Western,Southwest
+2018,Toronto Raptors,TOR,Eastern,Atlantic
+2018,Utah Jazz,UTA,Western,Northwest
+2018,Washington Wizards,WAS,Eastern,Southeast
+2019,Atlanta Hawks,ATL,Eastern,Southeast
+2019,Boston Celtics,BOS,Eastern,Atlantic
+2019,Brooklyn Nets,BRK,Eastern,Atlantic
+2019,Charlotte Hornets,CHO,Eastern,Southeast
+2019,Chicago Bulls,CHI,Eastern,Central
+2019,Cleveland Cavaliers,CLE,Eastern,Central
+2019,Dallas Mavericks,DAL,Western,Southwest
+2019,Denver Nuggets,DEN,Western,Northwest
+2019,Detroit Pistons,DET,Eastern,Central
+2019,Golden State Warriors,GSW,Western,Pacific
+2019,Houston Rockets,HOU,Western,Southwest
+2019,Indiana Pacers,IND,Eastern,Central
+2019,Los Angeles Clippers,LAC,Western,Pacific
+2019,Los Angeles Lakers,LAL,Western,Pacific
+2019,Memphis Grizzlies,MEM,Western,Southwest
+2019,Miami Heat,MIA,Eastern,Southeast
+2019,Milwaukee Bucks,MIL,Eastern,Central
+2019,Minnesota Timberwolves,MIN,Western,Northwest
+2019,New Orleans Pelicans,NOP,Western,Southwest
+2019,New York Knicks,NYK,Eastern,Atlantic
+2019,Oklahoma City Thunder,OKC,Western,Northwest
+2019,Orlando Magic,ORL,Eastern,Southeast
+2019,Philadelphia 76ers,PHI,Eastern,Atlantic
+2019,Phoenix Suns,PHO,Western,Pacific
+2019,Portland Trail Blazers,POR,Western,Northwest
+2019,Sacramento Kings,SAC,Western,Pacific
+2019,San Antonio Spurs,SAS,Western,Southwest
+2019,Toronto Raptors,TOR,Eastern,Atlantic
+2019,Utah Jazz,UTA,Western,Northwest
+2019,Washington Wizards,WAS,Eastern,Southeast
+2020,Atlanta Hawks,ATL,Eastern,Southeast
+2020,Boston Celtics,BOS,Eastern,Atlantic
+2020,Brooklyn Nets,BRK,Eastern,Atlantic
+2020,Charlotte Hornets,CHO,Eastern,Southeast
+2020,Chicago Bulls,CHI,Eastern,Central
+2020,Cleveland Cavaliers,CLE,Eastern,Central
+2020,Dallas Mavericks,DAL,Western,Southwest
+2020,Denver Nuggets,DEN,Western,Northwest
+2020,Detroit Pistons,DET,Eastern,Central
+2020,Golden State Warriors,GSW,Western,Pacific
+2020,Houston Rockets,HOU,Western,Southwest
+2020,Indiana Pacers,IND,Eastern,Central
+2020,Los Angeles Clippers,LAC,Western,Pacific
+2020,Los Angeles Lakers,LAL,Western,Pacific
+2020,Memphis Grizzlies,MEM,Western,Southwest
+2020,Miami Heat,MIA,Eastern,Southeast
+2020,Milwaukee Bucks,MIL,Eastern,Central
+2020,Minnesota Timberwolves,MIN,Western,Northwest
+2020,New Orleans Pelicans,NOP,Western,Southwest
+2020,New York Knicks,NYK,Eastern,Atlantic
+2020,Oklahoma City Thunder,OKC,Western,Northwest
+2020,Orlando Magic,ORL,Eastern,Southeast
+2020,Philadelphia 76ers,PHI,Eastern,Atlantic
+2020,Phoenix Suns,PHO,Western,Pacific
+2020,Portland Trail Blazers,POR,Western,Northwest
+2020,Sacramento Kings,SAC,Western,Pacific
+2020,San Antonio Spurs,SAS,Western,Southwest
+2020,Toronto Raptors,TOR,Eastern,Atlantic
+2020,Utah Jazz,UTA,Western,Northwest
+2020,Washington Wizards,WAS,Eastern,Southeast
+2021,Atlanta Hawks,ATL,Eastern,Southeast
+2021,Boston Celtics,BOS,Eastern,Atlantic
+2021,Brooklyn Nets,BRK,Eastern,Atlantic
+2021,Charlotte Hornets,CHO,Eastern,Southeast
+2021,Chicago Bulls,CHI,Eastern,Central
+2021,Cleveland Cavaliers,CLE,Eastern,Central
+2021,Dallas Mavericks,DAL,Western,Southwest
+2021,Denver Nuggets,DEN,Western,Northwest
+2021,Detroit Pistons,DET,Eastern,Central
+2021,Golden State Warriors,GSW,Western,Pacific
+2021,Houston Rockets,HOU,Western,Southwest
+2021,Indiana Pacers,IND,Eastern,Central
+2021,Los Angeles Clippers,LAC,Western,Pacific
+2021,Los Angeles Lakers,LAL,Western,Pacific
+2021,Memphis Grizzlies,MEM,Western,Southwest
+2021,Miami Heat,MIA,Eastern,Southeast
+2021,Milwaukee Bucks,MIL,Eastern,Central
+2021,Minnesota Timberwolves,MIN,Western,Northwest
+2021,New Orleans Pelicans,NOP,Western,Southwest
+2021,New York Knicks,NYK,Eastern,Atlantic
+2021,Oklahoma City Thunder,OKC,Western,Northwest
+2021,Orlando Magic,ORL,Eastern,Southeast
+2021,Philadelphia 76ers,PHI,Eastern,Atlantic
+2021,Phoenix Suns,PHO,Western,Pacific
+2021,Portland Trail Blazers,POR,Western,Northwest
+2021,Sacramento Kings,SAC,Western,Pacific
+2021,San Antonio Spurs,SAS,Western,Southwest
+2021,Toronto Raptors,TOR,Eastern,Atlantic
+2021,Utah Jazz,UTA,Western,Northwest
+2021,Washington Wizards,WAS,Eastern,Southeast
+2022,Atlanta Hawks,ATL,Eastern,Southeast
+2022,Boston Celtics,BOS,Eastern,Atlantic
+2022,Brooklyn Nets,BRK,Eastern,Atlantic
+2022,Charlotte Hornets,CHO,Eastern,Southeast
+2022,Chicago Bulls,CHI,Eastern,Central
+2022,Cleveland Cavaliers,CLE,Eastern,Central
+2022,Dallas Mavericks,DAL,Western,Southwest
+2022,Denver Nuggets,DEN,Western,Northwest
+2022,Detroit Pistons,DET,Eastern,Central
+2022,Golden State Warriors,GSW,Western,Pacific
+2022,Houston Rockets,HOU,Western,Southwest
+2022,Indiana Pacers,IND,Eastern,Central
+2022,Los Angeles Clippers,LAC,Western,Pacific
+2022,Los Angeles Lakers,LAL,Western,Pacific
+2022,Memphis Grizzlies,MEM,Western,Southwest
+2022,Miami Heat,MIA,Eastern,Southeast
+2022,Milwaukee Bucks,MIL,Eastern,Central
+2022,Minnesota Timberwolves,MIN,Western,Northwest
+2022,New Orleans Pelicans,NOP,Western,Southwest
+2022,New York Knicks,NYK,Eastern,Atlantic
+2022,Oklahoma City Thunder,OKC,Western,Northwest
+2022,Orlando Magic,ORL,Eastern,Southeast
+2022,Philadelphia 76ers,PHI,Eastern,Atlantic
+2022,Phoenix Suns,PHO,Western,Pacific
+2022,Portland Trail Blazers,POR,Western,Northwest
+2022,Sacramento Kings,SAC,Western,Pacific
+2022,San Antonio Spurs,SAS,Western,Southwest
+2022,Toronto Raptors,TOR,Eastern,Atlantic
+2022,Utah Jazz,UTA,Western,Northwest
+2022,Washington Wizards,WAS,Eastern,Southeast
+2023,Atlanta Hawks,ATL,Eastern,Southeast
+2023,Boston Celtics,BOS,Eastern,Atlantic
+2023,Brooklyn Nets,BRK,Eastern,Atlantic
+2023,Charlotte Hornets,CHO,Eastern,Southeast
+2023,Chicago Bulls,CHI,Eastern,Central
+2023,Cleveland Cavaliers,CLE,Eastern,Central
+2023,Dallas Mavericks,DAL,Western,Southwest
+2023,Denver Nuggets,DEN,Western,Northwest
+2023,Detroit Pistons,DET,Eastern,Central
+2023,Golden State Warriors,GSW,Western,Pacific
+2023,Houston Rockets,HOU,Western,Southwest
+2023,Indiana Pacers,IND,Eastern,Central
+2023,Los Angeles Clippers,LAC,Western,Pacific
+2023,Los Angeles Lakers,LAL,Western,Pacific
+2023,Memphis Grizzlies,MEM,Western,Southwest
+2023,Miami Heat,MIA,Eastern,Southeast
+2023,Milwaukee Bucks,MIL,Eastern,Central
+2023,Minnesota Timberwolves,MIN,Western,Northwest
+2023,New Orleans Pelicans,NOP,Western,Southwest
+2023,New York Knicks,NYK,Eastern,Atlantic
+2023,Oklahoma City Thunder,OKC,Western,Northwest
+2023,Orlando Magic,ORL,Eastern,Southeast
+2023,Philadelphia 76ers,PHI,Eastern,Atlantic
+2023,Phoenix Suns,PHO,Western,Pacific
+2023,Portland Trail Blazers,POR,Western,Northwest
+2023,Sacramento Kings,SAC,Western,Pacific
+2023,San Antonio Spurs,SAS,Western,Southwest
+2023,Toronto Raptors,TOR,Eastern,Atlantic
+2023,Utah Jazz,UTA,Western,Northwest
+2023,Washington Wizards,WAS,Eastern,Southeast
+2024,Atlanta Hawks,ATL,Eastern,Southeast
+2024,Boston Celtics,BOS,Eastern,Atlantic
+2024,Brooklyn Nets,BRK,Eastern,Atlantic
+2024,Charlotte Hornets,CHO,Eastern,Southeast
+2024,Chicago Bulls,CHI,Eastern,Central
+2024,Cleveland Cavaliers,CLE,Eastern,Central
+2024,Dallas Mavericks,DAL,Western,Southwest
+2024,Denver Nuggets,DEN,Western,Northwest
+2024,Detroit Pistons,DET,Eastern,Central
+2024,Golden State Warriors,GSW,Western,Pacific
+2024,Houston Rockets,HOU,Western,Southwest
+2024,Indiana Pacers,IND,Eastern,Central
+2024,Los Angeles Clippers,LAC,Western,Pacific
+2024,Los Angeles Lakers,LAL,Western,Pacific
+2024,Memphis Grizzlies,MEM,Western,Southwest
+2024,Miami Heat,MIA,Eastern,Southeast
+2024,Milwaukee Bucks,MIL,Eastern,Central
+2024,Minnesota Timberwolves,MIN,Western,Northwest
+2024,New Orleans Pelicans,NOP,Western,Southwest
+2024,New York Knicks,NYK,Eastern,Atlantic
+2024,Oklahoma City Thunder,OKC,Western,Northwest
+2024,Orlando Magic,ORL,Eastern,Southeast
+2024,Philadelphia 76ers,PHI,Eastern,Atlantic
+2024,Phoenix Suns,PHO,Western,Pacific
+2024,Portland Trail Blazers,POR,Western,Northwest
+2024,Sacramento Kings,SAC,Western,Pacific
+2024,San Antonio Spurs,SAS,Western,Southwest
+2024,Toronto Raptors,TOR,Eastern,Atlantic
+2024,Utah Jazz,UTA,Western,Northwest
+2024,Washington Wizards,WAS,Eastern,Southeast
+2025,Atlanta Hawks,ATL,Eastern,Southeast
+2025,Boston Celtics,BOS,Eastern,Atlantic
+2025,Brooklyn Nets,BRK,Eastern,Atlantic
+2025,Charlotte Hornets,CHO,Eastern,Southeast
+2025,Chicago Bulls,CHI,Eastern,Central
+2025,Cleveland Cavaliers,CLE,Eastern,Central
+2025,Dallas Mavericks,DAL,Western,Southwest
+2025,Denver Nuggets,DEN,Western,Northwest
+2025,Detroit Pistons,DET,Eastern,Central
+2025,Golden State Warriors,GSW,Western,Pacific
+2025,Houston Rockets,HOU,Western,Southwest
+2025,Indiana Pacers,IND,Eastern,Central
+2025,Los Angeles Clippers,LAC,Western,Pacific
+2025,Los Angeles Lakers,LAL,Western,Pacific
+2025,Memphis Grizzlies,MEM,Western,Southwest
+2025,Miami Heat,MIA,Eastern,Southeast
+2025,Milwaukee Bucks,MIL,Eastern,Central
+2025,Minnesota Timberwolves,MIN,Western,Northwest
+2025,New Orleans Pelicans,NOP,Western,Southwest
+2025,New York Knicks,NYK,Eastern,Atlantic
+2025,Oklahoma City Thunder,OKC,Western,Northwest
+2025,Orlando Magic,ORL,Eastern,Southeast
+2025,Philadelphia 76ers,PHI,Eastern,Atlantic
+2025,Phoenix Suns,PHO,Western,Pacific
+2025,Portland Trail Blazers,POR,Western,Northwest
+2025,Sacramento Kings,SAC,Western,Pacific
+2025,San Antonio Spurs,SAS,Western,Southwest
+2025,Toronto Raptors,TOR,Eastern,Atlantic
+2025,Utah Jazz,UTA,Western,Northwest
+2025,Washington Wizards,WAS,Eastern,Southeast

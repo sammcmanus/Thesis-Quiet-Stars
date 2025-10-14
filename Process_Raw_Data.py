@@ -6,16 +6,18 @@ import os
 import numpy as np 
 import pandas as pd
 from copy import deepcopy
-#from pathlib import Path
+
 
 
 # Load Datasets
 def load_clean_export():
-    global player_stats_DF
+    global player_stats_DF, ts_df_sub
+    
     advanced = pd.read_csv("Data\Raw\Advanced.csv")
     per_game = pd.read_csv("Data\Raw\Player Per Game.csv")
     team_summaries = pd.read_csv("Data\Raw\Team Summaries.csv")
     career_info = pd.read_csv("Data\Raw\Player Career Info.csv")
+    team_info = pd.read_csv(r"Data\Raw\NBA Teams.csv")
 
 # Data Cleaning and Preparation
     # Filtering out:
@@ -32,6 +34,11 @@ def load_clean_export():
     advanced_df_sub = advanced_df_sub.rename(columns={"team": "abv"})
     ppg_df_sub = ppg_df_sub.rename(columns={"team":"abv"})
     ts_df_sub = ts_df_sub.rename(columns={"abbreviation":"abv"})
+
+    # Merge team info to get team conference and division details
+    nba_cols = ["season", "abv", "conference", "division"]
+    ts_df_sub = pd.merge(ts_df_sub, team_info[nba_cols], on=['abv', 'season'], how='left')
+
 
     # Converting columns to correct data type.
 
@@ -148,10 +155,27 @@ def insight_2_data_prep():
     top_half.to_csv("Data/Processed/top_half.csv", index=False)
     bottom_half.to_csv("Data/Processed/bottom_half.csv", index=False)
 
+def insight_4_data_prep():
+
+    team_outcome_df = ts_df_sub 
+
+    team_outcome_df["games"] = team_outcome_df["w"] + team_outcome_df["l"]
+    #team_outcome_df["win_pct"] = np.where(team_outcome_df["games"]>0, team_outcome_df["w"]/team_outcome_df["games"], np.nan)
+    team_outcome_df["win_pct"] = team_outcome_df["w"] / team_outcome_df["games"]
+    team_outcome_df["win_pct"] = team_outcome_df["win_pct"].round(2)
+
+    keep_cols = ["season","abv","w","l","games","win_pct","conference","division"]
+    team_outcome_df = team_outcome_df[keep_cols]
+
+    os.makedirs("Data/Processed", exist_ok=True)
+    team_outcome_df.to_csv("Data/Processed/team_results.csv", index=False)
+
+
+
     
 if __name__ == "__main__":
     os.chdir(set_working_dir)
     load_clean_export()
     insight_2_data_prep()
-    
+    insight_4_data_prep()
     

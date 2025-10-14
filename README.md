@@ -25,6 +25,9 @@ Teams with deeper, more efficient benches finish with higher win percentages and
   - [Insight #1: Defensive Metrics and Team Success](Docs/Insight_1.md)
   - [Insight #2: Role Player Efficiency and Team Success](Docs/Insight_2.md)
   - [Insight #3: Player Efficiency and Experience](Docs/Insight_3.md)
+  - [Insight #4: Role Player Versatility and Offensive Efficiency](Docs/Insight_4.md)
+  - [Insight #5: Bench Strength and End-of-Season Standings](Docs/Insight_5.md)
+  - [Insight #6: Role Player Depth and End-of-Season Standings](Docs/Insight_6.md)
 - **[Change Log](Docs/Change_Log.md)**
 - **[Project Timeline](Docs/Project_Timeline.md)**
 
