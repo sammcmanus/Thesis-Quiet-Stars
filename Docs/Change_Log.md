@@ -29,3 +29,5 @@
 
 ## Week 4 - (10/09 - 10/16)
 
+    Add data for conference and division.
+    

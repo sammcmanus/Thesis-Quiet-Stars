@@ -42,6 +42,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
 | `Player Per Game.csv`    | Per-game box stats by player/season/team: MP, FG/3P/FT, REB, AST, STL, BLK, TOV, PTS.   |
 | `Player Career Info.csv` | Player bio/metadata: birthdate, height, weight, college, draft, position.               |
 | `Team Summaries.csv`     | Team-season rollups: wins/losses, pace, ratings, shooting/rebounding rates, attendance. |
+| `NBA Teams.csv`          | Team conference and division by season. |
 
 Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats">Kaggle – NBA/ABA/BAA Stats (1947-present)</a>
 
@@ -103,6 +104,8 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
     From Player Per Game: season, player_id, abv, ast_per_game, tov_per_game, mp_per_game
 
     From Team Summaries: season, abv, w, l, playoffs
+
+    From NBA Teams: season, abv, conference, division
 
 <BR>
 
@@ -169,10 +172,11 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
 
 | File                       | Columns Used                                                                            |
 | ------------------------   | --------------------------------------------------------------------------------------- |
-| `Advanced.csv`             | season, player_id, abv, per, ts_percent, obpm, dbpm, usg_percent, gs, g                 |
+| `Advanced.csv`             | season, player_id, abv, per, ts_percent, obpm, dbpm, usg_percent, gs, g, mp             |
 | `Player Per Game.csv`      | season, player_id, abv, ast_per_game, tov_per_game, mp_per_game                         |
 | `Team Summaries.csv`       | season, abv, w, l, playoffs                                                             |
-| `Player Career Info.csv`   | player_id, from                                                                         |    
+| `Player Career Info.csv`   | player_id, from                                                                         |
+| `NBA Teams.csv`            | season, abv, conference, division                                                       |
 
 <BR><BR>
 
@@ -181,8 +185,9 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
 | File                          | Purpose                                                                               |
 | ----------------------------- | ------------------------------------------------------------------------------------- |
 | `player_stats_cleaned.csv`    | Provide a clean flattened data soure to use for data insights.                        |
+| `team_results.csv`            | Provide a clean flattened data soure to use for data insights.                        |
 | `top_half.csv`                | Results of insight 2 data prep output, this is the data for role players by top 50% of each <BR> season teams by win percentage.                                                                                                             |
-| `bottom_half.csv`             | Results of insight 2 data prep output, this is the data for role players by bottom 50% of each <BR> season teams by win percentage.             
+| `bottom_half.csv`             | Results of insight 2 data prep output, this is the data for role players by bottom 50% of each <BR> season teams by win percentage.                                                                                                         |
 
 <BR><BR>
 

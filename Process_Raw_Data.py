@@ -56,7 +56,7 @@ def load_clean_export():
     # Combine nessecary states from team summary, advanced, and per-game stats into a single DataFrame for insights
 
     # Select only the needed columns from each DataFrame
-    advanced_cols = ["season", "player_id", "abv", "per", "ts_percent", "obpm", "dbpm", "usg_percent", "gs", "g"]
+    advanced_cols = ["season", "player_id", "abv", "per", "ts_percent", "obpm", "dbpm", "usg_percent", "gs", "g", "mp"]
     ppg_cols = ["season", "player_id", "abv", "ast_per_game", "tov_per_game", "mp_per_game"]
     ts_cols = ["season", "abv", "w", "l", "playoffs"]
 
@@ -160,7 +160,6 @@ def insight_4_data_prep():
     team_outcome_df = ts_df_sub 
 
     team_outcome_df["games"] = team_outcome_df["w"] + team_outcome_df["l"]
-    #team_outcome_df["win_pct"] = np.where(team_outcome_df["games"]>0, team_outcome_df["w"]/team_outcome_df["games"], np.nan)
     team_outcome_df["win_pct"] = team_outcome_df["w"] / team_outcome_df["games"]
     team_outcome_df["win_pct"] = team_outcome_df["win_pct"].round(2)
 
