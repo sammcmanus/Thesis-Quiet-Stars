@@ -1,0 +1,3 @@
+metric,mean,median,iqr,corr_team_win_perc,corr_team_win_perc_weighted_by_minutes,n
+ts_percent,0.542,0.54,0.08,0.184,0.175,722
+a2t_perc,1.802,1.645,1.19,0.134,0.143,722

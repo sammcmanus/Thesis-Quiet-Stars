@@ -1,116 +1,149 @@
+'''
+•	Role Player Versatility and Offensive Efficiency
+o	Analyze how role players (Usage 10-15%) contribute through shooting %, Assist-to-turnover %, FT %. 
+o	Highlights the importance of having versatile role players that are efficient.
+'''
+import numpy as np
 import pandas as pd
+import math
+import matplotlib.pyplot as plt
+import os
+
+set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
 def insight_4_Load_Data():
     
-    global player_stats_DF, team_df
+    global role_df
     
     player_stats_DF = pd.read_csv("Data/Processed/player_stats_cleaned.csv")
-    team_df  = pd.read_csv("Data/Processed/team_results.csv")
+
+    role_df = player_stats_DF[(player_stats_DF['role'] == 'R') & (player_stats_DF['usg_percent'].between(10, 15, inclusive='both'))]
+
+def _weighted_corr(x: pd.Series, y: pd.Series, w: pd.Series) -> float:
+    
+    m = ~np.isnan(x) & ~np.isnan(y) & ~np.isnan(w) & (w > 0)   
+    x, y, w = x[m], y[m], w[m]
+    ws = w.sum()
+    xm, ym = (w*x).sum()/ws, (w*y).sum()/ws
+    cov = (w*((x-xm)*(y-ym))).sum()/ws
+    vx  = (w*((x-xm)**2)).sum()/ws
+    vy  = (w*((y-ym)**2)).sum()/ws
+    
+    return cov/np.sqrt(vx*vy)
+
+def _pvalue(r: float, n: int) -> float:
+    z = 0.5 * math.log((1 + r) / (1 - r))
+    z_stat = z * math.sqrt(n - 3)
+    p = 2.0 * (1.0 - 0.5 * (1.0 + math.erf(abs(z_stat) / math.sqrt(2))))
+    return p
+
+def compute_overall_results():
+    
+    # Metrics table for TS% and A2T vs team_win_perc (unweighted & minutes-weighted).
+    # Columns: metric, mean, median, iqr, corr_team_win_perc, corr_team_win_perc_weighted_by_minutes, n
+    
+    weight = role_df["mp"].fillna(role_df["mp_per_game"]) if "mp" in role_df.columns else role_df["mp_per_game"]
+
+    rows = []
+    for metric in ["ts_percent", "a2t_perc"]:
+        rows.append({
+            "metric": metric,
+            "mean": round(role_df[metric].mean(),3),
+            "median": round(role_df[metric].median(),3),
+            "iqr": round(role_df[metric].quantile(0.75) - role_df[metric].quantile(0.25),3),
+            "corr_team_win_perc": round(role_df[metric].corr(role_df["team_win_perc"]), 3),
+            "corr_team_win_perc_weighted_by_minutes": round(_weighted_corr(role_df[metric], role_df["team_win_perc"], weight),3),
+            "n": int(role_df[metric].notna().sum())
+        })
+
+    cols = ["metric", "mean", "median", "iqr", "corr_team_win_perc", "corr_team_win_perc_weighted_by_minutes", "n"]
+
+    results_df = pd.DataFrame(rows)[cols]
+    
+    results_df.to_csv("Data/Insights/Insight_4_overall_results.csv", index=False)
+
+def plot_insight4_a2t_vs_wins():
+
+    # Scatter + unweighted trend line for A2T vs team_win_perc (role players; USG 10–15)
+
+    x = role_df["a2t_perc"]
+    y = role_df["team_win_perc"]
+    n = role_df[["a2t_perc", "team_win_perc"]].dropna().shape[0]
+    
+    r = x.corr(y)
+    w = role_df["mp"] if "mp" in role_df.columns else role_df["mp_per_game"]
+    r_w = _weighted_corr(x, y, w)
+    p = _pvalue(r, n)
 
 
-def insight_4_Stats():
+    plt.figure(figsize=(7.5, 5.5))
+    plt.scatter(x, y, s=12, alpha=0.6)
 
-    rp = player_stats_DF[(player_stats_DF['role'] == 'R') & (player_stats_DF['usg_percent'].between(10, 15, inclusive='both'))]
+    # unweighted least squares line
 
-    print(rp)
-        
+    xn = x.to_numpy()
+    yn = y.to_numpy()
+    m = ~np.isnan(xn) & ~np.isnan(yn)
+
+    k, b = np.polyfit(xn[m], yn[m], 1)
+    xline = np.linspace(xn[m].min(), xn[m].max(), 100)
+    yline = k * xline + b
+    plt.plot(xline, yline, linewidth=2)
+
+    plt.xlabel("Assist-to-Turnover Ratio (A2T)")
+    plt.ylabel("Team Win %")
+    plt.title("Role Players (USG 10–15): A2T vs Team Win%")
+    plt.suptitle(f"r = {r:.3f} | minutes-weighted r = {r_w:.3f} | approx p = {p:.4f} | n = {n}", y=0.02, fontsize=9)
+    plt.tight_layout()
+    plt.savefig('img/Insight_4_RP_A2T_WINS.png')
+
+
+
+def plot_insight4_ts_vs_wins():
+    
+    # Scatter + unweighted trend line for TS% vs team_win_perc (role players; USG 10–15).
+    
+    x = role_df["ts_percent"]
+    y = role_df["team_win_perc"]
+    n = role_df[["ts_percent", "team_win_perc"]].dropna().shape[0]
+
+    r = x.corr(y)
+    w = role_df["mp"] if "mp" in role_df.columns else role_df["mp_per_game"]
+    r_w = _weighted_corr(x, y, w)
+    p = _pvalue(r, n)
+
+
+    plt.figure(figsize=(7.5, 5.5))
+    plt.scatter(x, y, s=12, alpha=0.6)
+    
+    # unweighted least squares line
+
+    xn = x.to_numpy()
+    yn = y.to_numpy()
+    m = ~np.isnan(xn) & ~np.isnan(yn)
+    k, b = np.polyfit(xn[m], yn[m], 1)
+    xline = np.linspace(xn[m].min(), xn[m].max(), 100)
+    yline = k * xline + b
+    plt.plot(xline, yline, linewidth=2)
+
+    plt.xlabel("True Shooting % (TS%)")
+    plt.ylabel("Team Win %")
+    plt.title("Role Players (USG 10–15): TS% vs Team Win%")
+    plt.suptitle(f"r = {r:.3f} | minutes-weighted r = {r_w:.3f} | approx p = {p:.4f} | n = {n}", y=0.02, fontsize=9)
+    plt.tight_layout()
+    plt.savefig('img/Insight_4_RP_TS_WINS.png')
+    
+
+def insight_4_main():
+    compute_overall_results()
+    plot_insight4_ts_vs_wins()
+    plot_insight4_a2t_vs_wins()
 
 if __name__ == "__main__":
-    insight_4_Load_Data()
-    insight_4_Stats()
 
-'''# 2) Minutes-weighted team-season aggregation ---------------------------------
-def minutes_weighted_team_agg(role_df: pd.DataFrame, min_team_role_minutes: float = 0.0) -> pd.DataFrame:
-    """Aggregate to team-season level with minutes-weighted averages.
-    Output columns:
-      - role_ts_w: minutes-weighted TS% of selected role players
-      - role_a2t_w: minutes-weighted A2T% of selected role players
-      - role_min_sum: total minutes of selected role players
-      - role_players_count: number of selected role-player rows
-    Group key: ['season','abv'].
-    """
-    _require_cols(role_df, REQUIRED_COLS)
+    os.chdir(set_working_dir)
+    insight_4_Load_Data()  
+    insight_4_main()
 
-    def wavg(x: pd.Series, w: pd.Series) -> float:
-        x = x.astype(float); w = w.astype(float)
-        m = (~x.isna()) & (~w.isna())
-        if m.any() and w[m].sum() > 0:
-            return float(np.average(x[m], weights=w[m]))
-        return np.nan
 
-    grouped = (
-        role_df
-        .groupby(['season','abv'], as_index=False)
-        .apply(lambda g: pd.Series({
-            'role_ts_w': wavg(g['ts_percent'], g['mp']),
-            'role_a2t_w': wavg(g['a2t_perc'], g['mp']),
-            'role_min_sum': float(g['mp'].sum()),
-            'role_players_count': int(g.shape[0]),
-        }))
-        .reset_index(drop=True)
-    )
-    if min_team_role_minutes > 0:
-        grouped = grouped[grouped['role_min_sum'] >= min_team_role_minutes].copy()
-    return grouped
-
-# 3) Descriptive stats ---------------------------------------------------------
-def describe_metrics(team_df: pd.DataFrame) -> pd.DataFrame:
-    """Return mean, median, IQR, and N for role_ts_w and role_a2t_w.
-    Requires the output of minutes_weighted_team_agg.
-    """
-    for c in ['role_ts_w','role_a2t_w']:
-        if c not in team_df.columns:
-            raise KeyError(f"Expected column '{c}' in team_df.")
-    def desc(s: pd.Series) -> Dict[str, float]:
-        s = s.dropna()
-        if len(s) == 0:
-            return {'Mean': np.nan, 'Median': np.nan, 'IQR': np.nan, 'N_teams': 0}
-        return {
-            'Mean': float(s.mean()),
-            'Median': float(s.median()),
-            'IQR': float(np.percentile(s, 75) - np.percentile(s, 25)),
-            'N_teams': int(len(s))
-        }
-    rows = []
-    for m in ['role_ts_w','role_a2t_w']:
-        r = desc(team_df[m])
-        r['Metric'] = m
-        rows.append(r)
-    out = pd.DataFrame(rows)[['Metric','Mean','Median','IQR','N_teams']]
-    return out
-
-# 4) Correlation helper (optional target) -------------------------------------
-def correlate_with_target(team_df: pd.DataFrame, target_col: str) -> pd.DataFrame:
-    """Compute Pearson r between each role metric and a target column you provide.
-    Example target: 'team_win_perc' or 'w'.
-    Returns a tidy 2-row table for role_ts_w and role_a2t_w.
-    """
-    for c in ['role_ts_w','role_a2t_w', target_col]:
-        if c not in team_df.columns:
-            raise KeyError(f"Expected column '{c}' in team_df.")
-    rows = []
-    for m in ['role_ts_w','role_a2t_w']:
-        r = team_df[m].corr(team_df[target_col])
-        rows.append({'Metric': m, 'Target': target_col, 'r': float(r) if pd.notna(r) else np.nan, 'N': int(team_df[[m, target_col]].dropna().shape[0])})
-    return pd.DataFrame(rows)[['Metric','Target','r','N']]
-
-# 5) Simple quartile comparison (optional) ------------------------------------
-def quartile_compare(team_df: pd.DataFrame, metric: str, target_col: str) -> pd.DataFrame:
-    """Compare Top vs Bottom quartile of 'metric' on the provided target.
-    Returns a 2-row summary (Bottom 25%, Top 25%) with average metric and average target.
-    """
-    if metric not in team_df.columns or target_col not in team_df.columns:
-        raise KeyError("Columns missing in team_df for quartile comparison.")
-    df = team_df.dropna(subset=[metric, target_col]).copy()
-    if df.empty:
-        return pd.DataFrame(columns=['Group','Avg Metric','Avg Target','N teams'])
-    q1, q3 = np.percentile(df[metric], [25, 75])
-    low = df[df[metric] <= q1]
-    high = df[df[metric] >= q3]
-    return pd.DataFrame({
-        'Group': ['Bottom 25%', 'Top 25%'],
-        'Avg Metric': [float(low[metric].mean()), float(high[metric].mean())],
-        'Avg Target': [float(low[target_col].mean()), float(high[target_col].mean())],
-        'N teams': [int(len(low)), int(len(high))]
-    })
-'''
+    

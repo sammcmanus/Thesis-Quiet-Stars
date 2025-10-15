@@ -1,0 +1,13 @@
+metric,spearman_rho_vs_overall_rank
+bench_a2t_perc_mean,0.025971433742956216
+bench_a2t_perc_wmean,0.040174237449395904
+bench_dbpm_mean,-0.2513937936176507
+bench_dbpm_wmean,-0.249352677949855
+bench_obpm_mean,-0.10487890647057951
+bench_obpm_wmean,-0.09762616251859062
+bench_per_mean,-0.030899844503371483
+bench_per_wmean,-0.02656831451172125
+bench_ts_percent_mean,-0.06774583294649697
+bench_ts_percent_wmean,-0.06945480287867523
+bench_usg_percent_mean,-0.018424662885514403
+bench_usg_percent_wmean,-0.002475343088283743

@@ -3,6 +3,8 @@
 ### Type of Finding
 This finding is both statistical and visual. The scatterplots show how defensive box plus/minus (DBPM) values spread across starters, role players, and bench players, while the analysis highlights how each group’s defensive impact relates to team wins.
 
+---
+
 ### Connection to the Hypothesis:
 My hypothesis emphasizes that role players the “quiet stars” are critical to team success. By looking at defense
 
@@ -31,6 +33,8 @@ When grouping DBPM into performance ranges, the trend is a little more clear:
 | 2+         | 49.6                | 48.3                    | 42.7                     |
 
 Teams with role players posting DBPM above 0 average roughly 7–12 more wins than teams with below-average defenders. This pattern mirrors that of starters, just slightly lower in magnitude, which reinforces that strong defensive role players (the quiet stars) make a measurable difference.
+
+---
 
 ## Why It Matters:
 This insight gives statistical proof that role players contribute meaningfully to winning, especially on the defensive side. While starters are the most impactful, role players defensive consistency is what separates good teams from great ones. This supports the hypothesis that a team’s success is shaped not only by its starters, but by the quiet stars, efficient defenders who fill vital roles around them.

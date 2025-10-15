@@ -1,0 +1,13 @@
+metric,pearson_r_vs_win_pct
+bench_a2t_perc_mean,0.06178758136483092
+bench_a2t_perc_wmean,0.04682181478722171
+bench_dbpm_mean,0.2501585131892365
+bench_dbpm_wmean,0.2535229811282695
+bench_obpm_mean,0.12665862994730495
+bench_obpm_wmean,0.12189871584655294
+bench_per_mean,0.046028207761485376
+bench_per_wmean,0.047505448039293685
+bench_ts_percent_mean,0.14707326663573184
+bench_ts_percent_wmean,0.1542208574495129
+bench_usg_percent_mean,0.0030135855735344053
+bench_usg_percent_wmean,-0.009932738288758566

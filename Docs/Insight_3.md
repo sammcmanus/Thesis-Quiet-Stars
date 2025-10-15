@@ -5,6 +5,8 @@
 ## Type of Finding:
 This is a statistical finding because it measures and compares average player efficiency metrics between veterans (≥7 years of experience) and less-experienced players. 
 
+---
+
 ### Overall Efficiency: Veterans vs Non-Veterans
 
 | Experience | PER Mean | PER Weighted Mean | TS% Mean | DBPM Mean | DBPM Weighted Mean | USG% Mean |
@@ -39,7 +41,7 @@ Bench veterans trend slightly lower in offensive efficiency but improve in defen
 This analysis tested whether veteran players—those with more than seven years of experience showed meaningfully higher efficiency.
 Across all roles, veterans had slightly higher PER (14.60 vs 14.38) and marginally better DBPM (+0.14 vs –0.08), but nearly identical TS% (0.538 vs 0.539). Within role players specifically, veterans averaged PER 12.91 vs 13.05 for non-veterans and showed similar shooting efficiency. These small differences, insignificant p-value, suggests that experience alone does not drive efficiency gains among role players. 
 
-<BR><BR>
+---
 
 ## Why It Matters:
 This insight clarifies that veteran presence while valuable does not automatically translate into higher measurable efficiency. It emphasizes that effective role performance isn’t purely a function of experience. It may depend on how players are utilized and supported within team systems. Teams that balance veteran insight with younger energy may sustain efficiency more effectively.

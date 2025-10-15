@@ -3,6 +3,8 @@
 ## Type of Finding:
 This is a statistical and visualization finding. The bar charts show how often teams fall into certain efficiency ranges for role players, and the analysis highlights the differences between teams in the top half of the standings versus the bottom half.
 
+---
+
 ## Connection to the Hypothesis:
 The hypothesis states that role players, the “quiet stars,” are key drivers of team success. 
 
@@ -34,6 +36,8 @@ The Chi-Square test returned p = 0.0676, slightly above the 0.05 significance le
 While the result is not statistically significant at the 95% confidence level, the directional trend aligns with the visual data—top-half teams have a higher share of efficient role players. This supports the hypothesis that the presence of “quiet stars” offers a tangible, if subtle, advantage in overall team performance.
 
 Teams in the top half of the standings have more role players with efficiency ratings (PER) above 15 compared to bottom half teams. This supports the hypothesis by showing that efficient role players the “quiet stars” give their teams an edge in winning.
+
+---
 
 ## Why It Matters:
 This insight highlights how efficiency separates average teams from successful ones. Having role players who perform at or above league average efficiency is often what pushes a team into the top half of the standings, reinforcing the idea that the quiet stars play a real role in winning.

@@ -1,8 +1,11 @@
 import os
+
 from Process_Raw_Data import load_clean_export, insight_2_data_prep, insight_4_data_prep
+
 from Insight_1 import insight_1_Load_Data, insight_1_Starters, insight_1_Role, insight_1_Bench, insight_1_Correlation, insight_1_DBPM_Buckets
 from Insight_2 import insight_2_data_load, insight_2_Top_Half, insight_2_Bottom_Half, insight_2_stats
 from Insight_3 import insight_3_Load_Data, insight3_efficiency_tables
+from Insight_4 import insight_4_Load_Data, insight_4_main
 
 # Set your working directory here
 set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
@@ -27,3 +30,6 @@ if __name__ == "__main__":
 
     insight_3_Load_Data()
     insight3_efficiency_tables()
+
+    insight_4_Load_Data()
+    insight_4_main()
