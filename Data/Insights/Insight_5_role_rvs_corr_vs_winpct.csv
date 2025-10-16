@@ -1,0 +1,3 @@
+role,metric,n_teams,pearson_r
+R,rvs_mean,716,0.358
+B,rvs_mean,517,0.14

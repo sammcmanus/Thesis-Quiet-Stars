@@ -1,148 +1,115 @@
-'''
-•	Bench Strength and End-of-Season Standings
-o	Aggregate efficiency metrics (gathered in Bench player efficiency previous insights) per team and correlate with team end of season standings, post season results.
-o	Proving bench players are the quiet stars for a team's success.
-'''
+"""
+Insight 5 — Role Versatility & Team Success (minimal, fixed columns)
+
+Inputs:
+  Data/Processed/player_stats_cleaned.csv  (uses: season, abv, role, ts_percent, usg_percent, ast_per_game, tov_per_game)
+  Data/Processed/team_results.csv          (uses: season, abv, win_pct)
+
+Outputs:
+  Data/Insights/Insight_5_role_rvs_corr_vs_winpct.csv
+  Data/Insights/Insight_5_role_rvs_top_vs_bottom_gap.csv
+"""
+
 import numpy as np
 import pandas as pd
+from pathlib import Path
 import os
 
-set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
+# Use a raw string for Windows paths to avoid escape issues
+set_working_dir = r"C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
 def insight_5_Load_Data():
+    global players, teams
+    players = pd.read_csv("Data/Processed/player_stats_cleaned.csv", usecols=["season","abv","role","ts_percent","usg_percent","ast_per_game","tov_per_game"])
+    teams   = pd.read_csv("Data/Processed/team_results.csv", usecols=["season","abv","win_pct"])
 
-    global bench, teams_DF, metric_cols
-    
-    player_stats_DF = pd.read_csv("Data/Processed/player_stats_cleaned.csv")
-    teams_DF = pd.read_csv("Data/Processed/team_results.csv")
+def _winsorize(s, lo=0.025, hi=0.975):
+    ql, qu = s.quantile([lo, hi])
+    return s.clip(ql, qu)
 
-    bench_cols = ["per", "ts_percent", "obpm", "dbpm", "usg_percent", "a2t_perc", "mp"]
-    bench = player_stats_DF.loc[player_stats_DF["role"] == "B", ["season", "abv"] + bench_cols].copy()
-
-    metric_cols = ["bench_per_wmean", "bench_ts_percent_wmean", "bench_obpm_wmean", "bench_dbpm_wmean", "bench_usg_percent_wmean", "bench_a2t_perc_wmean",
-                   "bench_per_mean", "bench_ts_percent_mean", "bench_obpm_mean", "bench_dbpm_mean", "bench_usg_percent_mean", "bench_a2t_perc_mean"]
-
-def _weighted_avg(series, weights):
-    w = np.asarray(weights)
-    x = np.asarray(series)
-    if w.sum() == 0 or len(x) == 0:
-        return np.nan
-    return np.average(x, weights=w)
-
-def _corr_table(frame, y_col="win_pct"):
-
-    out = []
-    for m in metric_cols:
-        if m in frame.columns and frame[m].notna().sum() > 2 and frame[y_col].notna().sum() > 2:
-            r = frame[m].corr(frame[y_col])  # Pearson
-        else:
-            r = np.nan
-        out.append({"metric": m, "pearson_r_vs_" + y_col: r})
-    return pd.DataFrame(out).sort_values("metric").reset_index(drop=True)
-
-def _spearman_table(frame, rank_col):
-    out = []
-    sub = frame.copy()
-    for m in metric_cols:
-        if m in sub.columns:
-            pair = sub[[m, rank_col]].dropna()
-            if len(pair) > 2:
-                rho = pair[m].rank().corr(pair[rank_col].rank(), method="pearson")
-            else:
-                rho = np.nan
-            out.append({"metric": m, f"spearman_rho_vs_{rank_col}": rho})
-    return pd.DataFrame(out).sort_values("metric").reset_index(drop=True)
-
-
+def _zscore_by_season(df, col, season_key):
+    def _zs(s):
+        std = s.std(ddof=0)
+        if pd.isna(std) or std == 0:
+            return pd.Series(np.zeros(len(s)), index=s.index)
+        return (s - s.mean()) / std
+    return df.groupby(season_key)[col].transform(_zs)
 
 def insight_5_main():
-    
-    agg_rows = []
-    for (season, abv), g in bench.groupby(["season", "abv"]):
-        mp = g["mp"].sum()
-        row = {
-            "season": season,
-            "abv": abv,
-            "bench_mp": float(mp),
-            "bench_players": int(len(g))
-        }
-        # Weighted means for efficiency metrics
-        for c in ["per", "ts_percent", "obpm", "dbpm", "usg_percent", "a2t_perc"]:
-            row[f"bench_{c}_wmean"] = _weighted_avg(g[c], g["mp"])
-            row[f"bench_{c}_mean"]  = g[c].mean()
-        agg_rows.append(row)
+    # Fixed keys/columns
+    season_col = "season"
+    team_col   = "abv"
+    role_col   = "role"
 
-    bench_team = pd.DataFrame(agg_rows)
+    # Role + Bench only
+    players_rb = players[players[role_col].isin(["R","B"])].copy()
 
-    df = (bench_team
-            .merge(teams_DF, on=["season", "abv"], how="inner")
-            .copy())
+    # Winsorize USG, then build z-scores for the four fixed metrics
+    players_rb["__usg_w"] = players_rb.groupby(season_col)["usg_percent"].transform(_winsorize)
 
+    z_ts   = _zscore_by_season(players_rb, "ts_percent", season_col)
+    z_usg  = _zscore_by_season(players_rb, "__usg_w",    season_col)
+    z_ast  = _zscore_by_season(players_rb, "ast_per_game", season_col)
+    z_tov  = -_zscore_by_season(players_rb, "tov_per_game", season_col)  # flip sign (lower TOV is better)
 
-    df["overall_rank"] = df.groupby("season")["win_pct"].rank(ascending=False, method="min")
-    df["conf_rank"]    = df.groupby(["season", "conference"])["win_pct"].rank(ascending=False, method="min")
+    # RVS = mean of the four standardized components
+    stack = np.vstack([z_ts.values, z_usg.values, z_ast.values, z_tov.values])
+    players_rb["rvs"] = np.nanmean(stack.T, axis=1)
 
+    # Aggregate to (season, team, role)
+    team_role = (
+        players_rb.groupby([season_col, team_col, role_col], as_index=False)
+                  .agg(rvs_mean=("rvs","mean"),
+                       n_players=("rvs","count"))
+    )
 
-    # Overall Pearson vs win_pct
-    corr_overall = _corr_table(df, "win_pct")
-    corr_overall.to_csv("Data/Insights/bench_correlations_overall_vs_winpct.csv", index=False)
+    # Merge team win%
+    tr = team_role.merge(
+        teams[[season_col, team_col, "win_pct"]],
+        on=[season_col, team_col],
+        how="left"
+    ).dropna(subset=["rvs_mean","win_pct"])
 
-    # By conference
-    rows_conf = []
-    for (conf,), g in df.groupby(["conference"]):
-        ctab = _corr_table(g, "win_pct")
-        ctab.insert(0, "conference", conf)
-        rows_conf.append(ctab)
-    corr_by_conf = pd.concat(rows_conf, ignore_index=True)
-    corr_by_conf.to_csv("Data/Insights/bench_correlations_by_conference_vs_winpct.csv", index=False)
+    # Correlation (Role vs Bench)
+    corr_rows = []
+    for r in ["R","B"]:
+        sub = tr[tr[role_col] == r]
+        n = sub.shape[0]
+        pearson = sub["rvs_mean"].corr(sub["win_pct"]) if n >= 3 else np.nan
+        corr_rows.append({
+            role_col: r,
+            "metric": "rvs_mean",
+            "n_teams": int(n),
+            "pearson_r": (None if pd.isna(pearson) else round(float(pearson), 3))
+        })
+    corr_df = pd.DataFrame(corr_rows)
 
-    # By division
-    rows_div = []
-    for (div,), g in df.groupby(["division"]):
-        ctab = _corr_table(g, "win_pct")
-        ctab.insert(0, "division", div)
-        rows_div.append(ctab)
-    corr_by_div = pd.concat(rows_div, ignore_index=True)
-    corr_by_div.to_csv("Data/Insights/bench_correlations_by_division_vs_winpct.csv", index=False)
+    # Top vs Bottom Quartile Win% Gap
+    gap_rows = []
+    for r in ["R","B"]:
+        sub = tr[tr[role_col] == r].copy()
+        if sub.shape[0] >= 12:
+            sub["__rvs_q"] = pd.qcut(sub["rvs_mean"], 4, labels=[1,2,3,4])
+            q1 = sub.loc[sub["__rvs_q"] == 1, "win_pct"]
+            q4 = sub.loc[sub["__rvs_q"] == 4, "win_pct"]
+            gap_rows.append({
+                role_col: r,
+                "q1_avg_winpct": round(q1.mean(), 3),
+                "q4_avg_winpct": round(q4.mean(), 3),
+                "gap_q4_minus_q1": round((q4.mean() - q1.mean()), 3),
+                "n_q1": int(q1.size),
+                "n_q4": int(q4.size)
+            })
+    gap_df = pd.DataFrame(gap_rows)
 
+    # Save results
+    Path("Data/Insights").mkdir(parents=True, exist_ok=True)
+    corr_df.to_csv("Data/Insights/Insight_5_role_rvs_corr_vs_winpct.csv", index=False)
+    gap_df.to_csv("Data/Insights/Insight_5_role_rvs_top_vs_bottom_gap.csv", index=False)
 
-    spearman_overall = _spearman_table(df, "overall_rank")
-    spearman_overall.to_csv("Data/Insights/bench_vs_overall_rank_spearman.csv", index=False)
-
-    df_out_cols = [
-    "season","abv","conference","division","w","l","games","win_pct",
-    "overall_rank","conf_rank",
-    "bench_mp","bench_players"
-    ] + [c for c in df.columns if c.startswith("bench_") and c not in ["bench_mp","bench_players"]]
-    df[df_out_cols].to_csv("Data/Insights/bench_team_metrics.csv", index=False)
-
-
-    pd.set_option("display.width", 120)
-    pd.set_option("display.max_rows", 200)
-
-    print("\n=== Insight 5: Bench Strength vs Win% (Overall, Pearson) ===")
-    print(corr_overall.sort_values("pearson_r_vs_win_pct", ascending=False).to_string(index=False))
-
-    print("\n=== By Conference (Pearson vs Win%) ===")
-    for conf, g in corr_by_conf.groupby("conference"):
-        print(f"\n-- {conf} --")
-        print(g.sort_values("pearson_r_vs_win_pct", ascending=False).to_string(index=False))
-
-    print("\n=== Spearman vs Overall Rank (negative is better) ===")
-    print(spearman_overall.sort_values("spearman_rho_vs_overall_rank").to_string(index=False))
-
-
-
-
-
-
-
-
-    return None
+ 
 
 if __name__ == "__main__":
-
     os.chdir(set_working_dir)
-    insight_5_Load_Data()  
+    insight_5_Load_Data()
     insight_5_main()
-
