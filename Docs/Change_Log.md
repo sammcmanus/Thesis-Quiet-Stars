@@ -29,5 +29,10 @@
 
 ## Week 4 - (10/09 - 10/16)
 
-    Add data for conference and division.
-    
+    Add data for conference and division data to integrate with insight
+    Updated documentation  with additions
+    Insight 4: Added calculated stats and documented them.
+    Insight 4: Created visualizations to support calculations.
+    Insight 5: Added calculated statistical findings and documented them.
+
+## Week 5 - (10/16 - 10/23)
