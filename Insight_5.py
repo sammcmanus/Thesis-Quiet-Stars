@@ -41,29 +41,24 @@ def insight_5_main():
     team_col   = "abv"
     role_col   = "role"
 
-    # Role + Bench only
-    players_rb = players[players[role_col].isin(["R","B"])].copy()
 
-    # Winsorize USG, then build z-scores for the four fixed metrics
+    players_rb = players[players[role_col].isin(["R","B"])].copy()
     players_rb["__usg_w"] = players_rb.groupby(season_col)["usg_percent"].transform(_winsorize)
 
     z_ts   = _zscore_by_season(players_rb, "ts_percent", season_col)
     z_usg  = _zscore_by_season(players_rb, "__usg_w",    season_col)
     z_ast  = _zscore_by_season(players_rb, "ast_per_game", season_col)
-    z_tov  = -_zscore_by_season(players_rb, "tov_per_game", season_col)  # flip sign (lower TOV is better)
+    z_tov  = -_zscore_by_season(players_rb, "tov_per_game", season_col)  
 
-    # RVS = mean of the four standardized components
     stack = np.vstack([z_ts.values, z_usg.values, z_ast.values, z_tov.values])
     players_rb["rvs"] = np.nanmean(stack.T, axis=1)
 
-    # Aggregate to (season, team, role)
     team_role = (
         players_rb.groupby([season_col, team_col, role_col], as_index=False)
                   .agg(rvs_mean=("rvs","mean"),
                        n_players=("rvs","count"))
     )
 
-    # Merge team win%
     tr = team_role.merge(
         teams[[season_col, team_col, "win_pct"]],
         on=[season_col, team_col],
@@ -102,7 +97,7 @@ def insight_5_main():
             })
     gap_df = pd.DataFrame(gap_rows)
 
-    # Save results
+
     Path("Data/Insights").mkdir(parents=True, exist_ok=True)
     corr_df.to_csv("Data/Insights/Insight_5_role_rvs_corr_vs_winpct.csv", index=False)
     gap_df.to_csv("Data/Insights/Insight_5_role_rvs_top_vs_bottom_gap.csv", index=False)
