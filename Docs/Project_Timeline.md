@@ -15,7 +15,8 @@
 | **Status Report #9** | - Review feedback from draft.<br>- Apply revisions.<br>- Begin narrated presentation.<br>**Deliverable:** Final thesis complete and presentation drafted. | ![Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) | 11/13 | 11/20 | 7 |  |
 | **Status Report #10** | - Submit final thesis.<br>- Finalize and submit narrated presentation.<br>**Deliverable:** Completed project with all submissions. | ![Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) | 11/20 | 12/04 | 14 |  |
 | **Thesis Paper – First Draft** | Assignment 3 |![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 10/16 | 11/26 | 35 |  |
-| **Final Assignment** | Overall project deliverables | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 10/02 | 12/18 | 77 |  |
 | **Thesis Paper – Final Draft** | Assignment 4 | ![Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) | 10/23 | 12/04 | 42 |  |
+| **Supplementary Material** | Final Paper | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 12/04 | 12/18 | 35 |  |
+| **Final Assignment** | Overall project deliverables | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 10/02 | 12/18 | 77 |  |
 | **Final Thesis – Narrated Presentation** | Visual presentation | ![Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) | 12/04 | 12/11 | 7 |  |
 
