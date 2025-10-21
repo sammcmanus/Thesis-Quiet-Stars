@@ -13,6 +13,7 @@ RVS is built from standardized `ts_percent`, winsorized `usg_percent`, `ast_per_
 - **Correlation with Win%**  (`Insight_5_role_rvs_corr_vs_winpct.csv`)
   - Role (R): *r* = 0.358  
   - Bench (B): *r* = 0.140 
+  
 - **Top vs Bottom Quartile Win% Gap**  (`Insight_5_role_rvs_top_vs_bottom_gap.csv`)
   - Role (R): Q1 0.431 → Q4 0.573 — +0.141 gap  
   - Bench (B): Q1 0.448 → Q4 0.507 — +0.059 gap 

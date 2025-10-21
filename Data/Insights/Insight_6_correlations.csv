@@ -1,0 +1,13 @@
+metric,corr_win_pct,n
+dbpm_mean,0.61,716
+dbpm_wmean,0.605,716
+obpm_mean,0.358,716
+obpm_wmean,0.351,716
+ts_percent_mean,0.304,716
+ts_percent_wmean,0.302,716
+a2t_perc_wmean,0.262,716
+a2t_perc_mean,0.242,716
+per_mean,0.208,716
+per_wmean,0.207,716
+usg_percent_wmean,-0.134,716
+usg_percent_mean,-0.134,716
