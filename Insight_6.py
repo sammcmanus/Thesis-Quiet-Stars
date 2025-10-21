@@ -117,10 +117,13 @@ def insight_6_Breakdowns():
     pm.to_csv(f"Data/Insights/Insight_6_{top_metric}_playoff_comparison.csv", index=False)
 
 
-if __name__ == "__main__":
-    os.chdir(set_working_dir)
-    insight_6_Load_Data()
+def insight_6_main():
     insight_6_Build_Role_Depth()
     insight_6_Join_Team_Results()
     insight_6_Correlations()
     insight_6_Breakdowns()
+
+if __name__ == "__main__":
+    os.chdir(set_working_dir)
+    insight_6_Load_Data()
+    insight_6_main()

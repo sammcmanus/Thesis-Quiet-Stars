@@ -6,6 +6,8 @@ from Insight_1 import insight_1_Load_Data, insight_1_Starters, insight_1_Role, i
 from Insight_2 import insight_2_data_load, insight_2_Top_Half, insight_2_Bottom_Half, insight_2_stats
 from Insight_3 import insight_3_Load_Data, insight3_efficiency_tables
 from Insight_4 import insight_4_Load_Data, insight_4_main
+from Insight_5 import insight_5_Load_Data, insight_5_main
+from Insight_6 import insight_6_Load_Data, insight_6_main
 
 # Set your working directory here
 set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
@@ -33,3 +35,9 @@ if __name__ == "__main__":
 
     insight_4_Load_Data()
     insight_4_main()
+
+    insight_5_Load_Data() 
+    insight_5_main()   
+
+    insight_6_Load_Data() 
+    insight_6_main()   
