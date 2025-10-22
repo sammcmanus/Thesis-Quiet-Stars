@@ -65,11 +65,13 @@ def insight3_efficiency_tables() -> dict:
     by_role_df = _agg_by_group(d.groupby(["role", "is_vet"]), metrics, weight_col=weight_col)
     by_role_df["segment"] = by_role_df["segment"].apply(lambda s: f"{s[0]}|{s[1]}")
       
-    print("\nOverall (vets vs non-vets):\n")
-    print(overall_df)
+    #print("\nOverall (vets vs non-vets):\n")
+    #print(overall_df)
+    overall_df.to_csv("Data/Insights/Insight_3_overall_vets_v_nonvet.csv", index=False)
 
-    print("\nBy Role & Vet (e.i. 'R(role)|True(vet)' ):\n")
-    print(by_role_df.sort_values(by='segment', ascending=False))
+    #print("\nBy Role & Vet (e.i. 'R(role)|True(vet)' ):\n")
+    #print(by_role_df.sort_values(by='segment', ascending=False))
+    by_role_df.to_csv("Data/Insights/Insight_3_by_role_and_vet.csv", index=False)
 
 
 if __name__ == "__main__":

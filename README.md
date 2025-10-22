@@ -28,6 +28,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
   - [Insight #4: Role Player Versatility and Offensive Efficiency](Docs/Insight_4.md)
   - [Insight #5: Bench Strength and End-of-Season Standings](Docs/Insight_5.md)
   - [Insight #6: Role Player Depth and End-of-Season Standings](Docs/Insight_6.md)
+- **[Insight Outputs](#insight-output-files)**
 - **[Change Log](Docs/Change_Log.md)**
 - **[Project Timeline](Docs/Project_Timeline.md)**
 
@@ -180,7 +181,7 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
 
 <BR><BR>
 
-## Output Files
+## Output Processed Files
 
 | File                          | Purpose                                                                               |
 | ----------------------------- | ------------------------------------------------------------------------------------- |
@@ -190,6 +191,31 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
 | `bottom_half.csv`             | Results of insight 2 data prep output, this is the data for role players by bottom 50% of each <BR> season teams by win percentage.                                                                                                         |
 
 <BR><BR>
+
+## Insight Output Files
+
+| File                                              | Purpose |
+| ------------------------------------------------- | ------- |
+| `Insight_1_Starters_DBPM_WINS.png`                | Scatterplot of **Starters** DBPM vs team wins; visual evidence of defensive impact on success. |
+| `Insight_1_Role_DBPM_WINS.png`                    | Scatterplot of **Role Players** DBPM vs team wins; supports “quiet stars” hypothesis. |
+| `Insight_1_Bench_DBPM_WINS.png`                   | Scatterplot of **Bench** DBPM vs team wins; contextualizes depth contributions. |
+| `Insight_2_Top_Half.png`                          | Visualization of role-player efficiency for teams in the **top 50%** of win percentage by season.|
+| `Insight_2_Bottom_Half.png`                       | Visualization of role-player efficiency for teams in the **bottom 50%** of win percentage by season.|
+| `Insight_3_overall_vets_v_nonvet.csv`             | Summary of veterans (≥7 yrs) vs non-veterans (<7 yrs) across key performance metrics (PER, TS%, DBPM, USG%). Includes both simple and minutes-weighted averages to compare group efficiency. |
+| `Insight_3_by_role_and_vet.csv`                   | Efficiency summary broken down by role (Starter, Role, Bench) and veteran status. Shows how experience affects performance within each player category using PER, TS%, DBPM, and usage metrics. |
+| `Insight_4_overall_results.csv`                   | Summary table for **role players (USG 10–15)** showing metric distribution and correlations with team win%. |
+| `Insight_4_RP_TS_WINS.png`                        | Scatter + fit: **True Shooting % (TS%)** vs **Team Win%** for role players. |
+| `Insight_4_RP_A2T_WINS.png`                       | Scatter + fit: **Assist-to-Turnover Ratio (A2T)** vs **Team Win%** for role players. |
+| `Insight_5_role_rvs_corr_vs_winpct.csv`           | Two-row table (Role, Bench) with Pearson correlation between role-group RVS and team win%.|
+| `Insight_5_role_rvs_top_vs_bottom_gap.csv`	    | Summary of top vs bottom RVS quartile average win% for Role and Bench, plus the Q4–Q1 gap and count. |
+| `Insight_6_role_depth_by_team_season.csv`         | Team-season aggregates of role-player depth (R-only): simple means & minutes-weighted means for per, ts_percent, obpm, dbpm, usg_percent, a2t_perc; plus role_mp_total, role_gs_total, role_count, made_playoffs.|
+| `Insight_6_correlations.csv`	                    | Correlation coefficients between each role-depth metric and win_pct (league-wide). |
+| `Insight_6_dbpm_mean_conference_correlations.csv` | Correlation of the top metric (dbpm_mean) with win_pct by conference. |
+| `Insight_6_dbpm_mean_division_correlations.csv`   | Correlation of the top metric (dbpm_mean) with win_pct by division.
+| `Insight_6_dbpm_mean_playoff_comparison.csv`	    | Playoff vs Non-Playoff summary (mean/median/count) of the top metric (dbpm_mean).
+
+<br><br>
+
 
 ## Notes & Implications
     
