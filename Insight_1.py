@@ -8,12 +8,11 @@ set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
 def insight_1_Load_Data():
     global player_stats_DF
-    
     player_stats_DF = pd.read_csv("Data/Processed/player_stats_cleaned.csv")
 
 
 def insight_1_Starters():
-    # Starters
+    # Scatterplot of Starters DBPM and Wins
     plt.scatter(player_stats_DF.loc[player_stats_DF["role"] == "S", "dbpm"],
                 player_stats_DF.loc[player_stats_DF["role"] == "S", "w"], 
                 color='Red', 
@@ -28,7 +27,7 @@ def insight_1_Starters():
     plt.close()
 
 def insight_1_Role():
-    # Role Players
+    # Scatterplot of Role Players DBPM and Wins
     plt.scatter(player_stats_DF.loc[player_stats_DF["role"] == "R", "dbpm"],
                 player_stats_DF.loc[player_stats_DF["role"] == "R", "w"], 
                 color='green', 
@@ -42,7 +41,7 @@ def insight_1_Role():
     plt.close()
 
 def insight_1_Bench():
-    # Bench Players
+    # Scatterplot of Bench Players DBPM and Wins
     plt.scatter(player_stats_DF.loc[player_stats_DF["role"] == "B", "dbpm"],
                 player_stats_DF.loc[player_stats_DF["role"] == "B", "w"], 
                 color='blue', 
@@ -74,9 +73,9 @@ def insight_1_Correlation():
         
     corr_df = pd.DataFrame(corr_results).set_index("Role")
 
-    print("\nCorrelation between DBPM and Wins by Role:\n")
-    print(corr_df)
-
+    #print("\nCorrelation between DBPM and Wins by Role:\n")
+    #print(corr_df)
+    corr_df.to_csv("Data/Insights/Insight_1_correlation_dbpm_and_wins.csv", index=False)
 
 def insight_1_DBPM_Buckets():
     # Group players into DBPM buckets and calculate average team wins by role
@@ -92,6 +91,7 @@ def insight_1_DBPM_Buckets():
 
     bucket_results = []
 
+    # Loop through each role and calculate average wins per DBPM bucket
     for code, name in roles.items():
         subset = player_stats_DF.loc[player_stats_DF["role"] == code].copy()
         subset["DBPM_bucket"] = pd.cut(subset["dbpm"], bins=bins, labels=labels, include_lowest=True)
@@ -102,9 +102,9 @@ def insight_1_DBPM_Buckets():
 
         results_df = pd.concat(bucket_results, axis=1)
 
-    print("\nAverage Wins by DBPM Bucket and Role:\n")
-    print(results_df)
-
+    #print("\nAverage Wins by DBPM Bucket and Role:\n")
+    #print(results_df)
+    results_df.to_csv("Data/Insights/Insight_1_dbpm_buckets_and_wins.csv", index=True)
 
 
 if __name__ == "__main__":
