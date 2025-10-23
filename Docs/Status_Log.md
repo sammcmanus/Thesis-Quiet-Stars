@@ -1,4 +1,4 @@
-# Change Log
+# Status Log
 
 ### Status Report 1 (Sep 18 – Sep 25)
 
