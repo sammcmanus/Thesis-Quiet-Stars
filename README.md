@@ -213,8 +213,8 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
 | `Insight_6_role_depth_by_team_season.csv`         | Team-season aggregates of role-player depth (R-only): simple means & minutes-weighted means for per, ts_percent, obpm, dbpm, usg_percent, a2t_perc; plus role_mp_total, role_gs_total, role_count, made_playoffs.|
 | `Insight_6_correlations.csv`	                    | Correlation coefficients between each role-depth metric and win_pct (league-wide). |
 | `Insight_6_dbpm_mean_conference_correlations.csv` | Correlation of the top metric (dbpm_mean) with win_pct by conference. |
-| `Insight_6_dbpm_mean_division_correlations.csv`   | Correlation of the top metric (dbpm_mean) with win_pct by division.
-| `Insight_6_dbpm_mean_playoff_comparison.csv`	    | Playoff vs Non-Playoff summary (mean/median/count) of the top metric (dbpm_mean).
+| `Insight_6_dbpm_mean_division_correlations.csv`   | Correlation of the top metric (dbpm_mean) with win_pct by division. |
+| `Insight_6_dbpm_mean_playoff_comparison.csv`	    | Playoff vs Non-Playoff summary (mean/median/count) of the top metric (dbpm_mean). |
 
 <br><br>
 
