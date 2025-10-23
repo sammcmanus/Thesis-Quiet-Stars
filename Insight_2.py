@@ -71,9 +71,9 @@ def insight_2_stats():
     mean_top = top_half_df["per"].mean()
     mean_bottom = bottom_half_df["per"].mean()
 
-    print("\nMean PER Comparison")
-    print(f"Top Half Teams: {mean_top:.2f}")
-    print(f"Bottom Half Teams: {mean_bottom:.2f}")
+    #print("\nMean PER Comparison")
+    #print(f"Top Half Teams: {mean_top:.2f}")
+    #print(f"Bottom Half Teams: {mean_bottom:.2f}")
 
     # Proportion of teams with role player PER > 15
     top_high = (top_half_df["per"] > 15).sum()
@@ -84,14 +84,27 @@ def insight_2_stats():
     # Create contingency table
     table = [[top_high, top_total - top_high],
              [bottom_high, bottom_total - bottom_high]]
-
+    
+    # Perform Chi-Square test
     chi2, p, dof, ex = chi2_contingency(table)
 
-    print("\nProportion Test (Chi-Square)")
-    print(f"Top Half with PER > 15: {top_high}/{top_total}")
-    print(f"Bottom Half with PER > 15: {bottom_high}/{bottom_total}")
-    print(f"Chi-Square p-value: {p:.4f}")
+    #print("\nProportion Test (Chi-Square)")
+    #print(f"Top Half with PER > 15: {top_high}/{top_total}")
+    #print(f"Bottom Half with PER > 15: {bottom_high}/{bottom_total}")
+    #print(f"Chi-Square p-value: {p:.4f}")
+    
+    # Save results to CSV
+    chi_df = pd.DataFrame([["Top/Bottom Half", "Chi-Square"], ["Top Half Per > 15", f"{top_high}/{top_total}"], ["Bottom Half Per > 15", f"{bottom_high}/{bottom_total}"]])
+    chi_df.to_csv("Data/Insights/Insight_2_proportion_test_chi_square.csv", index=False)
 
+    mean_df = pd.DataFrame([["Top/Bottom Half", "Mean PER Comparison"], ["Top Half", f"{mean_top:.2f}"], ["Bottom Half", f"{mean_bottom:.2f}"]])
+    mean_df.to_csv("Data/Insights/Insight_2_mean_per_comparison.csv", index=False)
+    
+    print(mean_df)
+    
+    print(chi_df)
+    
+    # Interpret results
     if p < 0.05:
         print("\nResult: Statistically significant difference (p < 0.05).\n")
     else:

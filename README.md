@@ -201,6 +201,8 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
 | `Insight_1_Bench_DBPM_WINS.png`                   | Scatterplot of **Bench** DBPM vs team wins; contextualizes depth contributions. |
 | `Insight_2_Top_Half.png`                          | Visualization of role-player efficiency for teams in the **top 50%** of win percentage by season.|
 | `Insight_2_Bottom_Half.png`                       | Visualization of role-player efficiency for teams in the **bottom 50%** of win percentage by season.|
+| `Insight_2_mean_per_comparison.csv`	            | Summary of mean PER values for role players on top-half vs bottom-half teams; provides quantitative support for efficiency differences. |
+| `Insight_2_proportion_test_chi_square.csv`        | Output of Chi-Square proportion test comparing the share of role players with PER > 15 in top-half vs bottom-half teams; evaluates statistical significance of efficiency gap. |
 | `Insight_3_overall_vets_v_nonvet.csv`             | Summary of veterans (≥7 yrs) vs non-veterans (<7 yrs) across key performance metrics (PER, TS%, DBPM, USG%). Includes both simple and minutes-weighted averages to compare group efficiency. |
 | `Insight_3_by_role_and_vet.csv`                   | Efficiency summary broken down by role (Starter, Role, Bench) and veteran status. Shows how experience affects performance within each player category using PER, TS%, DBPM, and usage metrics. |
 | `Insight_4_overall_results.csv`                   | Summary table for **role players (USG 10–15)** showing metric distribution and correlations with team win%. |
@@ -217,7 +219,7 @@ Data Source Link: <a href="https://www.kaggle.com/datasets/sumitrodatta/nba-aba-
 <br><br>
 
 
-## Notes & Implications
+## Notes
     
     Excluding the shortened seasons 2020 & 2021 that was caused by covid.
     
