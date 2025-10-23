@@ -29,7 +29,7 @@ Teams with deeper, more efficient benches finish with higher win percentages and
   - [Insight #5: Bench Strength and End-of-Season Standings](Docs/Insight_5.md)
   - [Insight #6: Role Player Depth and End-of-Season Standings](Docs/Insight_6.md)
 - **[Insight Outputs](#insight-output-files)**
-- **[Change Log](Docs/Change_Log.md)**
+- **[Change Log](Docs/Status_Report.md)**
 - **[Project Timeline](Docs/Project_Timeline.md)**
 
 

@@ -73,7 +73,10 @@
   - Calculated role-depth metrics and summarized correlations with team win percentage.
   - Documented methodology, assumptions, and interpretation.
 
-**Deliverables:** Insight 6 statistical tables and narrative summary.
+- **Thesis First Draft**
+  - Finished the first version of the thesis paper, pulling together all earlier insights, data analysis, and key discoveries.
+
+**Deliverables:** Insight 6 statistical tables and narrative summary. Thesis first draft paper.
 
 ---
 
