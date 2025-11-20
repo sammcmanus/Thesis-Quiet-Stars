@@ -2,9 +2,7 @@
 
 | **Task Name** | **Original tasks** | **Status** | **Start Date** | **End Date** | **Duration (Days)** | **Comments / Feedback** |
 |----------------|---------------------------|-------------|----------------|---------------|----------------------|--------------------------|
-| **Status Report #9** | - Review feedback from draft.<br>- Apply revisions.<br>- Begin narrated presentation.<br>**Deliverable:** Final thesis complete and presentation drafted. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 11/13 | 11/20 | 7 |  |
 | **Status Report #10** | - Submit final thesis.<br>- Finalize and submit narrated presentation.<br>**Deliverable:** Completed project with all submissions. | ![Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) | 11/20 | 12/04 | 14 |  |
-| **Thesis Paper – Final Draft** | Assignment 4 | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 10/23 | 12/04 | 42 |  |
 | **Supplementary Material** | Final Paper | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 12/04 | 12/18 | 35 |  |
 | **Final Assignment** | Overall project deliverables | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 10/02 | 12/18 | 77 |  |
 | **Final Thesis – Narrated Presentation** | Visual presentation | ![Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) | 12/04 | 12/11 | 7 |  |
@@ -19,3 +17,5 @@
 | **Status Report #6** | - Run tests/correlations for Insights 5–6.<br>- Continue thesis draft.<br>**Deliverable:** Draft sections for Insights 5–6. |![Completed](https://img.shields.io/badge/Status-Completed-brightgreen)| 10/23 | 10/30 | 7 | As you move into final drafting and slide development, I encourage you to think creatively about how your findings could inform team-building or front-office strategies. |
 | **Status Report #7** | - Review and debug code.<br>- Verify accuracy of results.<br>- Continue writing thesis.<br>**Deliverable:** Near-complete, accuracy-checked draft. | ![Completed](https://img.shields.io/badge/Status-Completed-brightgreen) | 10/30 | 11/06 | 7 | As you work on the final draft and begin building your presentation slide deck, keep thinking about how to clearly convey your key insights to your audience. |
 | **Status Report #8** | - Validate thesis against project requirements.<br>- Finalize and submit draft.<br>**Deliverable:** Submitted draft thesis. |![Completed](https://img.shields.io/badge/Status-Completed-brightgreen) | 11/06 | 11/13 | 7 | - For Final draft, APA formatting revisions changes. https://southeast.iu.edu/writing-center/guides/apa-guide.html <BR>- Clarify hypothesis question in Abstract & Introduction |
+| **Status Report #9** | - Review feedback from draft.<br>- Apply revisions.<br>- Begin narrated presentation.<br>**Deliverable:** Final thesis complete and presentation drafted. | ![Completed](https://img.shields.io/badge/Status-Completed-brightgreen) | 11/13 | 11/20 | 7 |  |
+| **Thesis Paper – Final Draft** | Assignment 4 | ![Completed](https://img.shields.io/badge/Status-Completed-brightgreen)| 10/23 | 12/04 | 42 |  |
