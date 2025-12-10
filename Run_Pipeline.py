@@ -12,6 +12,9 @@ from Insight_6 import insight_6_Load_Data, insight_6_main
 # Set your working directory here
 set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
 
+# If running Local set to 1, else 0.
+Local_Run = 1
+
 if __name__ == "__main__":
     os.chdir(set_working_dir)
     load_clean_export()
