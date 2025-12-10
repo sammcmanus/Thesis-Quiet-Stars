@@ -1,5 +1,5 @@
 # Set your working directory here
-set_working_dir = "C:\Development\VSCode\Workspace\Github\Thesis-Quiet-Stars"
+set_working_dir = "C:/Development/VSCode/Workspace/Github/Thesis-Quiet-Stars"
 
 # Library Imports
 import os
@@ -13,11 +13,11 @@ from copy import deepcopy
 def load_clean_export():
     global player_stats_DF, ts_df_sub
     
-    advanced = pd.read_csv("Data\Raw\Advanced.csv")
-    per_game = pd.read_csv("Data\Raw\Player Per Game.csv")
-    team_summaries = pd.read_csv("Data\Raw\Team Summaries.csv")
-    career_info = pd.read_csv("Data\Raw\Player Career Info.csv")
-    team_info = pd.read_csv(r"Data\Raw\NBA Teams.csv")
+    advanced = pd.read_csv("Data/Raw/Advanced.csv")
+    per_game = pd.read_csv("Data/Raw/Player Per Game.csv")
+    team_summaries = pd.read_csv("Data/Raw/Team Summaries.csv")
+    career_info = pd.read_csv("Data/Raw/Player Career Info.csv")
+    team_info = pd.read_csv(r"Data/Raw/NBA Teams.csv")
 
 # Data Cleaning and Preparation
     # Filtering out:
