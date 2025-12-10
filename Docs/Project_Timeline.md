@@ -2,10 +2,10 @@
 
 | **Task Name** | **Original tasks** | **Status** | **Start Date** | **End Date** | **Duration (Days)** | **Comments / Feedback** |
 |----------------|---------------------------|-------------|----------------|---------------|----------------------|--------------------------|
-| **Status Report #10** | - Submit final thesis.<br>- Finalize and submit narrated presentation.<br>**Deliverable:** Completed project with all submissions. | ![Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) | 11/20 | 12/04 | 14 |  |
+| **Status Report #10** | - Submit final thesis.<br>- Finalize and submit narrated presentation.<br>**Deliverable:** Completed project with all submissions. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 11/20 | 12/04 | 14 |  |
 | **Supplementary Material** | Final Paper | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 12/04 | 12/18 | 35 |  |
 | **Final Assignment** | Overall project deliverables | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 10/02 | 12/18 | 77 |  |
-| **Final Thesis – Narrated Presentation** | Visual presentation | ![Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) | 12/04 | 12/11 | 7 |  |
+| **Final Thesis – Narrated Presentation** | Visual presentation | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) | 12/04 | 12/11 | 7 |  |
 | **Senior Thesis Research Proposal** | Assignment 1 | ![Completed](https://img.shields.io/badge/Status-Completed-brightgreen) | 08/18 | 09/04 | 17 |  |
 | **Literature Review Section for Thesis Project** | Assignment 2 | ![Completed](https://img.shields.io/badge/Status-Completed-brightgreen) | 09/04 | 09/18 | 14 |  |
 | **Thesis Paper – First Draft** | Assignment 3 | ![Completed](https://img.shields.io/badge/Status-Completed-brightgreen) | 10/16 | 11/26 | 35 | - Consider adding a brief appendix or link to your GitHub scripts in the body of the paper for reproducibility (you’ve already done this—great job!).<br> - If time permits, include a short paragraph on how your findings could inform team-building strategies or front-office analytics.<BR> - Continue proofreading for minor stylistic consistency.|
@@ -19,3 +19,11 @@
 | **Status Report #8** | - Validate thesis against project requirements.<br>- Finalize and submit draft.<br>**Deliverable:** Submitted draft thesis. |![Completed](https://img.shields.io/badge/Status-Completed-brightgreen) | 11/06 | 11/13 | 7 | - For Final draft, APA formatting revisions changes. https://southeast.iu.edu/writing-center/guides/apa-guide.html <BR>- Clarify hypothesis question in Abstract & Introduction |
 | **Status Report #9** | - Review feedback from draft.<br>- Apply revisions.<br>- Begin narrated presentation.<br>**Deliverable:** Final thesis complete and presentation drafted. | ![Completed](https://img.shields.io/badge/Status-Completed-brightgreen) | 11/13 | 11/20 | 7 |  |
 | **Thesis Paper – Final Draft** | Assignment 4 | ![Completed](https://img.shields.io/badge/Status-Completed-brightgreen)| 10/23 | 12/04 | 42 |  |
+
+<!--
+[Not Started](https://img.shields.io/badge/Status-Not%20Started-lightgrey) 
+
+![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow)
+
+![Completed](https://img.shields.io/badge/Status-Completed-brightgreen)
+-->
